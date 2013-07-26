@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5ED7EA4317A31FBE00CC7087 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED7EA4217A31FBE00CC7087 /* Foundation.framework */; };
+		5ED7EA4817A31FBE00CC7087 /* Bypass.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5ED7EA4717A31FBE00CC7087 /* Bypass.h */; };
+		5ED7EA5217A31FBE00CC7087 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED7EA5117A31FBE00CC7087 /* SenTestingKit.framework */; };
+		5ED7EA5417A31FBE00CC7087 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED7EA5317A31FBE00CC7087 /* UIKit.framework */; };
+		5ED7EA5517A31FBE00CC7087 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED7EA4217A31FBE00CC7087 /* Foundation.framework */; };
+		5ED7EA5817A31FBE00CC7087 /* libBypass.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED7EA3F17A31FBD00CC7087 /* libBypass.a */; };
+		5ED7EA5E17A31FBE00CC7087 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5ED7EA5C17A31FBE00CC7087 /* InfoPlist.strings */; };
+		5ED7EA6117A31FBE00CC7087 /* BypassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA6017A31FBE00CC7087 /* BypassTests.m */; };
+		5ED7EA7617A3234D00CC7087 /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA7017A3234D00CC7087 /* array.c */; };
+		5ED7EA7717A3234D00CC7087 /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA7017A3234D00CC7087 /* array.c */; };
+		5ED7EA7817A3234D00CC7087 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA7217A3234D00CC7087 /* buffer.c */; };
+		5ED7EA7917A3234D00CC7087 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA7217A3234D00CC7087 /* buffer.c */; };
+		5ED7EA7A17A3234D00CC7087 /* markdown.c in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA7417A3234D00CC7087 /* markdown.c */; };
+		5ED7EA7B17A3234D00CC7087 /* markdown.c in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA7417A3234D00CC7087 /* markdown.c */; };
+		5ED7EA8217A3236900CC7087 /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA7C17A3236900CC7087 /* document.cpp */; };
+		5ED7EA8317A3236900CC7087 /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA7C17A3236900CC7087 /* document.cpp */; };
+		5ED7EA8417A3236900CC7087 /* element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA7E17A3236900CC7087 /* element.cpp */; };
+		5ED7EA8517A3236900CC7087 /* element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA7E17A3236900CC7087 /* element.cpp */; };
+		5ED7EA8617A3236900CC7087 /* parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA8017A3236900CC7087 /* parser.cpp */; };
+		5ED7EA8717A3236900CC7087 /* parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA8017A3236900CC7087 /* parser.cpp */; };
+		5ED7EAB017A3241800CC7087 /* BPAttributedTextVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAA317A3241800CC7087 /* BPAttributedTextVisitor.m */; };
+		5ED7EAB117A3241800CC7087 /* BPAttributedTextVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAA317A3241800CC7087 /* BPAttributedTextVisitor.m */; };
+		5ED7EAB217A3241800CC7087 /* BPDisplaySettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAA517A3241800CC7087 /* BPDisplaySettings.m */; };
+		5ED7EAB317A3241800CC7087 /* BPDisplaySettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAA517A3241800CC7087 /* BPDisplaySettings.m */; };
+		5ED7EAB417A3241800CC7087 /* BPDocument.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAA717A3241800CC7087 /* BPDocument.mm */; };
+		5ED7EAB517A3241800CC7087 /* BPDocument.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAA717A3241800CC7087 /* BPDocument.mm */; };
+		5ED7EAB617A3241800CC7087 /* BPElement.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAAA17A3241800CC7087 /* BPElement.mm */; };
+		5ED7EAB717A3241800CC7087 /* BPElement.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAAA17A3241800CC7087 /* BPElement.mm */; };
+		5ED7EAB817A3241800CC7087 /* BPElementWalker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAAD17A3241800CC7087 /* BPElementWalker.m */; };
+		5ED7EAB917A3241800CC7087 /* BPElementWalker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAAD17A3241800CC7087 /* BPElementWalker.m */; };
+		5ED7EABA17A3241800CC7087 /* BPTextVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAAF17A3241800CC7087 /* BPTextVisitor.m */; };
+		5ED7EABB17A3241800CC7087 /* BPTextVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAAF17A3241800CC7087 /* BPTextVisitor.m */; };
+		5ED7EAC017A3251700CC7087 /* BPMarkdownPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EABD17A3251700CC7087 /* BPMarkdownPageView.m */; };
+		5ED7EAC117A3251700CC7087 /* BPMarkdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EABF17A3251700CC7087 /* BPMarkdownView.m */; };
+		5ED7EAC417A3253B00CC7087 /* BPParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAC317A3253B00CC7087 /* BPParser.mm */; };
+		5ED7EAC517A3253B00CC7087 /* BPParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAC317A3253B00CC7087 /* BPParser.mm */; };
+		5ED7EACA17A3257200CC7087 /* BPAccessibilityElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAC717A3257200CC7087 /* BPAccessibilityElement.m */; };
+		5ED7EACB17A3257200CC7087 /* BPAccessibilityVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAC917A3257200CC7087 /* BPAccessibilityVisitor.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5ED7EA5617A31FBE00CC7087 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5ED7EA3717A31FBD00CC7087 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5ED7EA3E17A31FBD00CC7087;
+			remoteInfo = Bypass;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5ED7EA3D17A31FBD00CC7087 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				5ED7EA4817A31FBE00CC7087 /* Bypass.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5ED7EA3F17A31FBD00CC7087 /* libBypass.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBypass.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ED7EA4217A31FBE00CC7087 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5ED7EA4617A31FBE00CC7087 /* Bypass-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bypass-Prefix.pch"; sourceTree = "<group>"; };
+		5ED7EA4717A31FBE00CC7087 /* Bypass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bypass.h; sourceTree = "<group>"; };
+		5ED7EA5017A31FBE00CC7087 /* BypassTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BypassTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ED7EA5117A31FBE00CC7087 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		5ED7EA5317A31FBE00CC7087 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		5ED7EA5B17A31FBE00CC7087 /* BypassTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BypassTests-Info.plist"; sourceTree = "<group>"; };
+		5ED7EA5D17A31FBE00CC7087 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5ED7EA5F17A31FBE00CC7087 /* BypassTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BypassTests.h; sourceTree = "<group>"; };
+		5ED7EA6017A31FBE00CC7087 /* BypassTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BypassTests.m; sourceTree = "<group>"; };
+		5ED7EA7017A3234D00CC7087 /* array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = array.c; path = "../../Libraries/bypass-core/src/soldout/array.c"; sourceTree = "<group>"; };
+		5ED7EA7117A3234D00CC7087 /* array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = array.h; path = "../../Libraries/bypass-core/src/soldout/array.h"; sourceTree = "<group>"; };
+		5ED7EA7217A3234D00CC7087 /* buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = buffer.c; path = "../../Libraries/bypass-core/src/soldout/buffer.c"; sourceTree = "<group>"; };
+		5ED7EA7317A3234D00CC7087 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buffer.h; path = "../../Libraries/bypass-core/src/soldout/buffer.h"; sourceTree = "<group>"; };
+		5ED7EA7417A3234D00CC7087 /* markdown.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = markdown.c; path = "../../Libraries/bypass-core/src/soldout/markdown.c"; sourceTree = "<group>"; };
+		5ED7EA7517A3234D00CC7087 /* markdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = markdown.h; path = "../../Libraries/bypass-core/src/soldout/markdown.h"; sourceTree = "<group>"; };
+		5ED7EA7C17A3236900CC7087 /* document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = document.cpp; path = "../../Libraries/bypass-core/src/document.cpp"; sourceTree = "<group>"; };
+		5ED7EA7D17A3236900CC7087 /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = document.h; path = "../../Libraries/bypass-core/src/document.h"; sourceTree = "<group>"; };
+		5ED7EA7E17A3236900CC7087 /* element.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = element.cpp; path = "../../Libraries/bypass-core/src/element.cpp"; sourceTree = "<group>"; };
+		5ED7EA7F17A3236900CC7087 /* element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = element.h; path = "../../Libraries/bypass-core/src/element.h"; sourceTree = "<group>"; };
+		5ED7EA8017A3236900CC7087 /* parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = parser.cpp; path = "../../Libraries/bypass-core/src/parser.cpp"; sourceTree = "<group>"; };
+		5ED7EA8117A3236900CC7087 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = parser.h; path = "../../Libraries/bypass-core/src/parser.h"; sourceTree = "<group>"; };
+		5ED7EAA217A3241800CC7087 /* BPAttributedTextVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPAttributedTextVisitor.h; sourceTree = "<group>"; };
+		5ED7EAA317A3241800CC7087 /* BPAttributedTextVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPAttributedTextVisitor.m; sourceTree = "<group>"; };
+		5ED7EAA417A3241800CC7087 /* BPDisplaySettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPDisplaySettings.h; sourceTree = "<group>"; };
+		5ED7EAA517A3241800CC7087 /* BPDisplaySettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPDisplaySettings.m; sourceTree = "<group>"; };
+		5ED7EAA617A3241800CC7087 /* BPDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPDocument.h; sourceTree = "<group>"; };
+		5ED7EAA717A3241800CC7087 /* BPDocument.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BPDocument.mm; sourceTree = "<group>"; };
+		5ED7EAA817A3241800CC7087 /* BPDocumentPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPDocumentPrivate.h; sourceTree = "<group>"; };
+		5ED7EAA917A3241800CC7087 /* BPElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPElement.h; sourceTree = "<group>"; };
+		5ED7EAAA17A3241800CC7087 /* BPElement.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BPElement.mm; sourceTree = "<group>"; };
+		5ED7EAAB17A3241800CC7087 /* BPElementPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPElementPrivate.h; sourceTree = "<group>"; };
+		5ED7EAAC17A3241800CC7087 /* BPElementWalker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPElementWalker.h; sourceTree = "<group>"; };
+		5ED7EAAD17A3241800CC7087 /* BPElementWalker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPElementWalker.m; sourceTree = "<group>"; };
+		5ED7EAAE17A3241800CC7087 /* BPTextVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTextVisitor.h; sourceTree = "<group>"; };
+		5ED7EAAF17A3241800CC7087 /* BPTextVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTextVisitor.m; sourceTree = "<group>"; };
+		5ED7EABC17A3251700CC7087 /* BPMarkdownPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPMarkdownPageView.h; sourceTree = "<group>"; };
+		5ED7EABD17A3251700CC7087 /* BPMarkdownPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPMarkdownPageView.m; sourceTree = "<group>"; };
+		5ED7EABE17A3251700CC7087 /* BPMarkdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPMarkdownView.h; sourceTree = "<group>"; };
+		5ED7EABF17A3251700CC7087 /* BPMarkdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPMarkdownView.m; sourceTree = "<group>"; };
+		5ED7EAC217A3253B00CC7087 /* BPParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPParser.h; sourceTree = "<group>"; };
+		5ED7EAC317A3253B00CC7087 /* BPParser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BPParser.mm; sourceTree = "<group>"; };
+		5ED7EAC617A3257200CC7087 /* BPAccessibilityElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPAccessibilityElement.h; sourceTree = "<group>"; };
+		5ED7EAC717A3257200CC7087 /* BPAccessibilityElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPAccessibilityElement.m; sourceTree = "<group>"; };
+		5ED7EAC817A3257200CC7087 /* BPAccessibilityVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPAccessibilityVisitor.h; sourceTree = "<group>"; };
+		5ED7EAC917A3257200CC7087 /* BPAccessibilityVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPAccessibilityVisitor.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5ED7EA3C17A31FBD00CC7087 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ED7EA4317A31FBE00CC7087 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ED7EA4C17A31FBE00CC7087 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ED7EA5217A31FBE00CC7087 /* SenTestingKit.framework in Frameworks */,
+				5ED7EA5417A31FBE00CC7087 /* UIKit.framework in Frameworks */,
+				5ED7EA5517A31FBE00CC7087 /* Foundation.framework in Frameworks */,
+				5ED7EA5817A31FBE00CC7087 /* libBypass.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5ED7EA3617A31FBD00CC7087 = {
+			isa = PBXGroup;
+			children = (
+				5ED7EA4417A31FBE00CC7087 /* Bypass */,
+				5ED7EA5917A31FBE00CC7087 /* BypassTests */,
+				5ED7EA4117A31FBD00CC7087 /* Frameworks */,
+				5ED7EA4017A31FBD00CC7087 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5ED7EA4017A31FBD00CC7087 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5ED7EA3F17A31FBD00CC7087 /* libBypass.a */,
+				5ED7EA5017A31FBE00CC7087 /* BypassTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5ED7EA4117A31FBD00CC7087 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5ED7EA4217A31FBE00CC7087 /* Foundation.framework */,
+				5ED7EA5117A31FBE00CC7087 /* SenTestingKit.framework */,
+				5ED7EA5317A31FBE00CC7087 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5ED7EA4417A31FBE00CC7087 /* Bypass */ = {
+			isa = PBXGroup;
+			children = (
+				5ED7EA4717A31FBE00CC7087 /* Bypass.h */,
+				5ED7EA6B17A3204200CC7087 /* Accessibility */,
+				5ED7EA6D17A3207D00CC7087 /* View */,
+				5ED7EA6C17A3205200CC7087 /* Model */,
+				5ED7EA6E17A3208200CC7087 /* Soldout */,
+				5ED7EA6F17A3209400CC7087 /* Core */,
+				5ED7EA4517A31FBE00CC7087 /* Supporting Files */,
+			);
+			path = Bypass;
+			sourceTree = "<group>";
+		};
+		5ED7EA4517A31FBE00CC7087 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5ED7EA4617A31FBE00CC7087 /* Bypass-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5ED7EA5917A31FBE00CC7087 /* BypassTests */ = {
+			isa = PBXGroup;
+			children = (
+				5ED7EA5F17A31FBE00CC7087 /* BypassTests.h */,
+				5ED7EA6017A31FBE00CC7087 /* BypassTests.m */,
+				5ED7EA5A17A31FBE00CC7087 /* Supporting Files */,
+			);
+			path = BypassTests;
+			sourceTree = "<group>";
+		};
+		5ED7EA5A17A31FBE00CC7087 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5ED7EA5B17A31FBE00CC7087 /* BypassTests-Info.plist */,
+				5ED7EA5C17A31FBE00CC7087 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5ED7EA6B17A3204200CC7087 /* Accessibility */ = {
+			isa = PBXGroup;
+			children = (
+				5ED7EAC617A3257200CC7087 /* BPAccessibilityElement.h */,
+				5ED7EAC717A3257200CC7087 /* BPAccessibilityElement.m */,
+				5ED7EAC817A3257200CC7087 /* BPAccessibilityVisitor.h */,
+				5ED7EAC917A3257200CC7087 /* BPAccessibilityVisitor.m */,
+			);
+			name = Accessibility;
+			sourceTree = "<group>";
+		};
+		5ED7EA6C17A3205200CC7087 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5ED7EAC217A3253B00CC7087 /* BPParser.h */,
+				5ED7EAC317A3253B00CC7087 /* BPParser.mm */,
+				5ED7EAA217A3241800CC7087 /* BPAttributedTextVisitor.h */,
+				5ED7EAA317A3241800CC7087 /* BPAttributedTextVisitor.m */,
+				5ED7EAA417A3241800CC7087 /* BPDisplaySettings.h */,
+				5ED7EAA517A3241800CC7087 /* BPDisplaySettings.m */,
+				5ED7EAA617A3241800CC7087 /* BPDocument.h */,
+				5ED7EAA717A3241800CC7087 /* BPDocument.mm */,
+				5ED7EAA817A3241800CC7087 /* BPDocumentPrivate.h */,
+				5ED7EAA917A3241800CC7087 /* BPElement.h */,
+				5ED7EAAA17A3241800CC7087 /* BPElement.mm */,
+				5ED7EAAB17A3241800CC7087 /* BPElementPrivate.h */,
+				5ED7EAAC17A3241800CC7087 /* BPElementWalker.h */,
+				5ED7EAAD17A3241800CC7087 /* BPElementWalker.m */,
+				5ED7EAAE17A3241800CC7087 /* BPTextVisitor.h */,
+				5ED7EAAF17A3241800CC7087 /* BPTextVisitor.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5ED7EA6D17A3207D00CC7087 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5ED7EABC17A3251700CC7087 /* BPMarkdownPageView.h */,
+				5ED7EABD17A3251700CC7087 /* BPMarkdownPageView.m */,
+				5ED7EABE17A3251700CC7087 /* BPMarkdownView.h */,
+				5ED7EABF17A3251700CC7087 /* BPMarkdownView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5ED7EA6E17A3208200CC7087 /* Soldout */ = {
+			isa = PBXGroup;
+			children = (
+				5ED7EA7017A3234D00CC7087 /* array.c */,
+				5ED7EA7117A3234D00CC7087 /* array.h */,
+				5ED7EA7217A3234D00CC7087 /* buffer.c */,
+				5ED7EA7317A3234D00CC7087 /* buffer.h */,
+				5ED7EA7417A3234D00CC7087 /* markdown.c */,
+				5ED7EA7517A3234D00CC7087 /* markdown.h */,
+			);
+			name = Soldout;
+			sourceTree = "<group>";
+		};
+		5ED7EA6F17A3209400CC7087 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5ED7EA7C17A3236900CC7087 /* document.cpp */,
+				5ED7EA7D17A3236900CC7087 /* document.h */,
+				5ED7EA7E17A3236900CC7087 /* element.cpp */,
+				5ED7EA7F17A3236900CC7087 /* element.h */,
+				5ED7EA8017A3236900CC7087 /* parser.cpp */,
+				5ED7EA8117A3236900CC7087 /* parser.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5ED7EA3E17A31FBD00CC7087 /* Bypass */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5ED7EA6417A31FBE00CC7087 /* Build configuration list for PBXNativeTarget "Bypass" */;
+			buildPhases = (
+				5ED7EA3B17A31FBD00CC7087 /* Sources */,
+				5ED7EA3C17A31FBD00CC7087 /* Frameworks */,
+				5ED7EA3D17A31FBD00CC7087 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bypass;
+			productName = Bypass;
+			productReference = 5ED7EA3F17A31FBD00CC7087 /* libBypass.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5ED7EA4F17A31FBE00CC7087 /* BypassTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5ED7EA6717A31FBE00CC7087 /* Build configuration list for PBXNativeTarget "BypassTests" */;
+			buildPhases = (
+				5ED7EA4B17A31FBE00CC7087 /* Sources */,
+				5ED7EA4C17A31FBE00CC7087 /* Frameworks */,
+				5ED7EA4D17A31FBE00CC7087 /* Resources */,
+				5ED7EA4E17A31FBE00CC7087 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5ED7EA5717A31FBE00CC7087 /* PBXTargetDependency */,
+			);
+			name = BypassTests;
+			productName = BypassTests;
+			productReference = 5ED7EA5017A31FBE00CC7087 /* BypassTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5ED7EA3717A31FBD00CC7087 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Uncodin, Inc";
+			};
+			buildConfigurationList = 5ED7EA3A17A31FBD00CC7087 /* Build configuration list for PBXProject "Bypass" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5ED7EA3617A31FBD00CC7087;
+			productRefGroup = 5ED7EA4017A31FBD00CC7087 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5ED7EA3E17A31FBD00CC7087 /* Bypass */,
+				5ED7EA4F17A31FBE00CC7087 /* BypassTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5ED7EA4D17A31FBE00CC7087 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ED7EA5E17A31FBE00CC7087 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5ED7EA4E17A31FBE00CC7087 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5ED7EA3B17A31FBD00CC7087 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ED7EA7617A3234D00CC7087 /* array.c in Sources */,
+				5ED7EA7817A3234D00CC7087 /* buffer.c in Sources */,
+				5ED7EA7A17A3234D00CC7087 /* markdown.c in Sources */,
+				5ED7EA8217A3236900CC7087 /* document.cpp in Sources */,
+				5ED7EA8417A3236900CC7087 /* element.cpp in Sources */,
+				5ED7EA8617A3236900CC7087 /* parser.cpp in Sources */,
+				5ED7EAB017A3241800CC7087 /* BPAttributedTextVisitor.m in Sources */,
+				5ED7EAB217A3241800CC7087 /* BPDisplaySettings.m in Sources */,
+				5ED7EAB417A3241800CC7087 /* BPDocument.mm in Sources */,
+				5ED7EAB617A3241800CC7087 /* BPElement.mm in Sources */,
+				5ED7EAB817A3241800CC7087 /* BPElementWalker.m in Sources */,
+				5ED7EABA17A3241800CC7087 /* BPTextVisitor.m in Sources */,
+				5ED7EAC017A3251700CC7087 /* BPMarkdownPageView.m in Sources */,
+				5ED7EAC117A3251700CC7087 /* BPMarkdownView.m in Sources */,
+				5ED7EAC417A3253B00CC7087 /* BPParser.mm in Sources */,
+				5ED7EACA17A3257200CC7087 /* BPAccessibilityElement.m in Sources */,
+				5ED7EACB17A3257200CC7087 /* BPAccessibilityVisitor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5ED7EA4B17A31FBE00CC7087 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ED7EA6117A31FBE00CC7087 /* BypassTests.m in Sources */,
+				5ED7EA7717A3234D00CC7087 /* array.c in Sources */,
+				5ED7EA7917A3234D00CC7087 /* buffer.c in Sources */,
+				5ED7EA7B17A3234D00CC7087 /* markdown.c in Sources */,
+				5ED7EA8317A3236900CC7087 /* document.cpp in Sources */,
+				5ED7EA8517A3236900CC7087 /* element.cpp in Sources */,
+				5ED7EA8717A3236900CC7087 /* parser.cpp in Sources */,
+				5ED7EAB117A3241800CC7087 /* BPAttributedTextVisitor.m in Sources */,
+				5ED7EAB317A3241800CC7087 /* BPDisplaySettings.m in Sources */,
+				5ED7EAB517A3241800CC7087 /* BPDocument.mm in Sources */,
+				5ED7EAB717A3241800CC7087 /* BPElement.mm in Sources */,
+				5ED7EAB917A3241800CC7087 /* BPElementWalker.m in Sources */,
+				5ED7EABB17A3241800CC7087 /* BPTextVisitor.m in Sources */,
+				5ED7EAC517A3253B00CC7087 /* BPParser.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5ED7EA5717A31FBE00CC7087 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5ED7EA3E17A31FBD00CC7087 /* Bypass */;
+			targetProxy = 5ED7EA5617A31FBE00CC7087 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5ED7EA5C17A31FBE00CC7087 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5ED7EA5D17A31FBE00CC7087 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5ED7EA6217A31FBE00CC7087 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5ED7EA6317A31FBE00CC7087 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5ED7EA6517A31FBE00CC7087 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Bypass.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bypass/Bypass-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5ED7EA6617A31FBE00CC7087 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Bypass.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bypass/Bypass-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5ED7EA6817A31FBE00CC7087 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bypass/Bypass-Prefix.pch";
+				INFOPLIST_FILE = "BypassTests/BypassTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		5ED7EA6917A31FBE00CC7087 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bypass/Bypass-Prefix.pch";
+				INFOPLIST_FILE = "BypassTests/BypassTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5ED7EA3A17A31FBD00CC7087 /* Build configuration list for PBXProject "Bypass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ED7EA6217A31FBE00CC7087 /* Debug */,
+				5ED7EA6317A31FBE00CC7087 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5ED7EA6417A31FBE00CC7087 /* Build configuration list for PBXNativeTarget "Bypass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ED7EA6517A31FBE00CC7087 /* Debug */,
+				5ED7EA6617A31FBE00CC7087 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5ED7EA6717A31FBE00CC7087 /* Build configuration list for PBXNativeTarget "BypassTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ED7EA6817A31FBE00CC7087 /* Debug */,
+				5ED7EA6917A31FBE00CC7087 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5ED7EA3717A31FBD00CC7087 /* Project object */;
+}

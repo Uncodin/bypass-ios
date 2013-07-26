@@ -1,0 +1,3 @@
+[submodule "Libraries/bypass-core"]
+	path = Libraries/bypass-core
+	url = git@github.com:Uncodin/bypass-core.git
