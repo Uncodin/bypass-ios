@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E95247A17A854BD00B174C2 /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E95247417A854BD00B174C2 /* document.cpp */; };
+		5E95247B17A854BD00B174C2 /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E95247417A854BD00B174C2 /* document.cpp */; };
+		5E95247C17A854BD00B174C2 /* element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E95247617A854BD00B174C2 /* element.cpp */; };
+		5E95247D17A854BD00B174C2 /* element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E95247617A854BD00B174C2 /* element.cpp */; };
+		5E95247E17A854BD00B174C2 /* parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E95247817A854BD00B174C2 /* parser.cpp */; };
+		5E95247F17A854BD00B174C2 /* parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E95247817A854BD00B174C2 /* parser.cpp */; };
+		5E95248617A854CC00B174C2 /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E95248017A854CC00B174C2 /* array.c */; };
+		5E95248717A854CC00B174C2 /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E95248017A854CC00B174C2 /* array.c */; };
+		5E95248817A854CC00B174C2 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E95248217A854CC00B174C2 /* buffer.c */; };
+		5E95248917A854CC00B174C2 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E95248217A854CC00B174C2 /* buffer.c */; };
+		5E95248A17A854CC00B174C2 /* markdown.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E95248417A854CC00B174C2 /* markdown.c */; };
+		5E95248B17A854CC00B174C2 /* markdown.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E95248417A854CC00B174C2 /* markdown.c */; };
 		5ED7EA4317A31FBE00CC7087 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED7EA4217A31FBE00CC7087 /* Foundation.framework */; };
 		5ED7EA4817A31FBE00CC7087 /* Bypass.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5ED7EA4717A31FBE00CC7087 /* Bypass.h */; };
 		5ED7EA5217A31FBE00CC7087 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED7EA5117A31FBE00CC7087 /* SenTestingKit.framework */; };
@@ -15,18 +27,6 @@
 		5ED7EA5817A31FBE00CC7087 /* libBypass.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED7EA3F17A31FBD00CC7087 /* libBypass.a */; };
 		5ED7EA5E17A31FBE00CC7087 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5ED7EA5C17A31FBE00CC7087 /* InfoPlist.strings */; };
 		5ED7EA6117A31FBE00CC7087 /* BypassTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA6017A31FBE00CC7087 /* BypassTests.m */; };
-		5ED7EA7617A3234D00CC7087 /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA7017A3234D00CC7087 /* array.c */; };
-		5ED7EA7717A3234D00CC7087 /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA7017A3234D00CC7087 /* array.c */; };
-		5ED7EA7817A3234D00CC7087 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA7217A3234D00CC7087 /* buffer.c */; };
-		5ED7EA7917A3234D00CC7087 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA7217A3234D00CC7087 /* buffer.c */; };
-		5ED7EA7A17A3234D00CC7087 /* markdown.c in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA7417A3234D00CC7087 /* markdown.c */; };
-		5ED7EA7B17A3234D00CC7087 /* markdown.c in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA7417A3234D00CC7087 /* markdown.c */; };
-		5ED7EA8217A3236900CC7087 /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA7C17A3236900CC7087 /* document.cpp */; };
-		5ED7EA8317A3236900CC7087 /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA7C17A3236900CC7087 /* document.cpp */; };
-		5ED7EA8417A3236900CC7087 /* element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA7E17A3236900CC7087 /* element.cpp */; };
-		5ED7EA8517A3236900CC7087 /* element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA7E17A3236900CC7087 /* element.cpp */; };
-		5ED7EA8617A3236900CC7087 /* parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA8017A3236900CC7087 /* parser.cpp */; };
-		5ED7EA8717A3236900CC7087 /* parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EA8017A3236900CC7087 /* parser.cpp */; };
 		5ED7EAB017A3241800CC7087 /* BPAttributedTextVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAA317A3241800CC7087 /* BPAttributedTextVisitor.m */; };
 		5ED7EAB117A3241800CC7087 /* BPAttributedTextVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAA317A3241800CC7087 /* BPAttributedTextVisitor.m */; };
 		5ED7EAB217A3241800CC7087 /* BPDisplaySettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAA517A3241800CC7087 /* BPDisplaySettings.m */; };
@@ -71,6 +71,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5E95247417A854BD00B174C2 /* document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = document.cpp; path = "Libraries/bypass-core/src/document.cpp"; sourceTree = SOURCE_ROOT; };
+		5E95247517A854BD00B174C2 /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = document.h; path = "Libraries/bypass-core/src/document.h"; sourceTree = SOURCE_ROOT; };
+		5E95247617A854BD00B174C2 /* element.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = element.cpp; path = "Libraries/bypass-core/src/element.cpp"; sourceTree = SOURCE_ROOT; };
+		5E95247717A854BD00B174C2 /* element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = element.h; path = "Libraries/bypass-core/src/element.h"; sourceTree = SOURCE_ROOT; };
+		5E95247817A854BD00B174C2 /* parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = parser.cpp; path = "Libraries/bypass-core/src/parser.cpp"; sourceTree = SOURCE_ROOT; };
+		5E95247917A854BD00B174C2 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = parser.h; path = "Libraries/bypass-core/src/parser.h"; sourceTree = SOURCE_ROOT; };
+		5E95248017A854CC00B174C2 /* array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = array.c; path = "Libraries/bypass-core/src/soldout/array.c"; sourceTree = SOURCE_ROOT; };
+		5E95248117A854CC00B174C2 /* array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = array.h; path = "Libraries/bypass-core/src/soldout/array.h"; sourceTree = SOURCE_ROOT; };
+		5E95248217A854CC00B174C2 /* buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = buffer.c; path = "Libraries/bypass-core/src/soldout/buffer.c"; sourceTree = SOURCE_ROOT; };
+		5E95248317A854CC00B174C2 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buffer.h; path = "Libraries/bypass-core/src/soldout/buffer.h"; sourceTree = SOURCE_ROOT; };
+		5E95248417A854CC00B174C2 /* markdown.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = markdown.c; path = "Libraries/bypass-core/src/soldout/markdown.c"; sourceTree = SOURCE_ROOT; };
+		5E95248517A854CC00B174C2 /* markdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = markdown.h; path = "Libraries/bypass-core/src/soldout/markdown.h"; sourceTree = SOURCE_ROOT; };
 		5ED7EA3F17A31FBD00CC7087 /* libBypass.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBypass.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED7EA4217A31FBE00CC7087 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5ED7EA4617A31FBE00CC7087 /* Bypass-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bypass-Prefix.pch"; sourceTree = "<group>"; };
@@ -82,18 +94,6 @@
 		5ED7EA5D17A31FBE00CC7087 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5ED7EA5F17A31FBE00CC7087 /* BypassTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BypassTests.h; sourceTree = "<group>"; };
 		5ED7EA6017A31FBE00CC7087 /* BypassTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BypassTests.m; sourceTree = "<group>"; };
-		5ED7EA7017A3234D00CC7087 /* array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = array.c; path = "../../Libraries/bypass-core/src/soldout/array.c"; sourceTree = "<group>"; };
-		5ED7EA7117A3234D00CC7087 /* array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = array.h; path = "../../Libraries/bypass-core/src/soldout/array.h"; sourceTree = "<group>"; };
-		5ED7EA7217A3234D00CC7087 /* buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = buffer.c; path = "../../Libraries/bypass-core/src/soldout/buffer.c"; sourceTree = "<group>"; };
-		5ED7EA7317A3234D00CC7087 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buffer.h; path = "../../Libraries/bypass-core/src/soldout/buffer.h"; sourceTree = "<group>"; };
-		5ED7EA7417A3234D00CC7087 /* markdown.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = markdown.c; path = "../../Libraries/bypass-core/src/soldout/markdown.c"; sourceTree = "<group>"; };
-		5ED7EA7517A3234D00CC7087 /* markdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = markdown.h; path = "../../Libraries/bypass-core/src/soldout/markdown.h"; sourceTree = "<group>"; };
-		5ED7EA7C17A3236900CC7087 /* document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = document.cpp; path = "../../Libraries/bypass-core/src/document.cpp"; sourceTree = "<group>"; };
-		5ED7EA7D17A3236900CC7087 /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = document.h; path = "../../Libraries/bypass-core/src/document.h"; sourceTree = "<group>"; };
-		5ED7EA7E17A3236900CC7087 /* element.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = element.cpp; path = "../../Libraries/bypass-core/src/element.cpp"; sourceTree = "<group>"; };
-		5ED7EA7F17A3236900CC7087 /* element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = element.h; path = "../../Libraries/bypass-core/src/element.h"; sourceTree = "<group>"; };
-		5ED7EA8017A3236900CC7087 /* parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = parser.cpp; path = "../../Libraries/bypass-core/src/parser.cpp"; sourceTree = "<group>"; };
-		5ED7EA8117A3236900CC7087 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = parser.h; path = "../../Libraries/bypass-core/src/parser.h"; sourceTree = "<group>"; };
 		5ED7EAA217A3241800CC7087 /* BPAttributedTextVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPAttributedTextVisitor.h; sourceTree = "<group>"; };
 		5ED7EAA317A3241800CC7087 /* BPAttributedTextVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPAttributedTextVisitor.m; sourceTree = "<group>"; };
 		5ED7EAA417A3241800CC7087 /* BPDisplaySettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPDisplaySettings.h; sourceTree = "<group>"; };
@@ -143,11 +143,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E95247217A854A100B174C2 /* BypassCore */ = {
+			isa = PBXGroup;
+			children = (
+				5E95247417A854BD00B174C2 /* document.cpp */,
+				5E95247517A854BD00B174C2 /* document.h */,
+				5E95247617A854BD00B174C2 /* element.cpp */,
+				5E95247717A854BD00B174C2 /* element.h */,
+				5E95247817A854BD00B174C2 /* parser.cpp */,
+				5E95247917A854BD00B174C2 /* parser.h */,
+				5E95247317A854A900B174C2 /* libsoldout */,
+			);
+			name = BypassCore;
+			sourceTree = "<group>";
+		};
+		5E95247317A854A900B174C2 /* libsoldout */ = {
+			isa = PBXGroup;
+			children = (
+				5E95248017A854CC00B174C2 /* array.c */,
+				5E95248117A854CC00B174C2 /* array.h */,
+				5E95248217A854CC00B174C2 /* buffer.c */,
+				5E95248317A854CC00B174C2 /* buffer.h */,
+				5E95248417A854CC00B174C2 /* markdown.c */,
+				5E95248517A854CC00B174C2 /* markdown.h */,
+			);
+			name = libsoldout;
+			sourceTree = "<group>";
+		};
 		5ED7EA3617A31FBD00CC7087 = {
 			isa = PBXGroup;
 			children = (
 				5ED7EA4417A31FBE00CC7087 /* Bypass */,
 				5ED7EA5917A31FBE00CC7087 /* BypassTests */,
+				5ED7F1F417A84FEE00621F90 /* Libraries */,
 				5ED7EA4117A31FBD00CC7087 /* Frameworks */,
 				5ED7EA4017A31FBD00CC7087 /* Products */,
 			);
@@ -175,12 +203,11 @@
 		5ED7EA4417A31FBE00CC7087 /* Bypass */ = {
 			isa = PBXGroup;
 			children = (
+				5E95247217A854A100B174C2 /* BypassCore */,
 				5ED7EA4717A31FBE00CC7087 /* Bypass.h */,
 				5ED7EA6B17A3204200CC7087 /* Accessibility */,
 				5ED7EA6D17A3207D00CC7087 /* View */,
 				5ED7EA6C17A3205200CC7087 /* Model */,
-				5ED7EA6E17A3208200CC7087 /* Soldout */,
-				5ED7EA6F17A3209400CC7087 /* Core */,
 				5ED7EA4517A31FBE00CC7087 /* Supporting Files */,
 			);
 			path = Bypass;
@@ -258,30 +285,12 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		5ED7EA6E17A3208200CC7087 /* Soldout */ = {
+		5ED7F1F417A84FEE00621F90 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				5ED7EA7017A3234D00CC7087 /* array.c */,
-				5ED7EA7117A3234D00CC7087 /* array.h */,
-				5ED7EA7217A3234D00CC7087 /* buffer.c */,
-				5ED7EA7317A3234D00CC7087 /* buffer.h */,
-				5ED7EA7417A3234D00CC7087 /* markdown.c */,
-				5ED7EA7517A3234D00CC7087 /* markdown.h */,
 			);
-			name = Soldout;
-			sourceTree = "<group>";
-		};
-		5ED7EA6F17A3209400CC7087 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				5ED7EA7C17A3236900CC7087 /* document.cpp */,
-				5ED7EA7D17A3236900CC7087 /* document.h */,
-				5ED7EA7E17A3236900CC7087 /* element.cpp */,
-				5ED7EA7F17A3236900CC7087 /* element.h */,
-				5ED7EA8017A3236900CC7087 /* parser.cpp */,
-				5ED7EA8117A3236900CC7087 /* parser.h */,
-			);
-			name = Core;
+			name = Libraries;
+			path = BypassTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,12 +391,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5ED7EA7617A3234D00CC7087 /* array.c in Sources */,
-				5ED7EA7817A3234D00CC7087 /* buffer.c in Sources */,
-				5ED7EA7A17A3234D00CC7087 /* markdown.c in Sources */,
-				5ED7EA8217A3236900CC7087 /* document.cpp in Sources */,
-				5ED7EA8417A3236900CC7087 /* element.cpp in Sources */,
-				5ED7EA8617A3236900CC7087 /* parser.cpp in Sources */,
 				5ED7EAB017A3241800CC7087 /* BPAttributedTextVisitor.m in Sources */,
 				5ED7EAB217A3241800CC7087 /* BPDisplaySettings.m in Sources */,
 				5ED7EAB417A3241800CC7087 /* BPDocument.mm in Sources */,
@@ -399,6 +402,12 @@
 				5ED7EAC417A3253B00CC7087 /* BPParser.mm in Sources */,
 				5ED7EACA17A3257200CC7087 /* BPAccessibilityElement.m in Sources */,
 				5ED7EACB17A3257200CC7087 /* BPAccessibilityVisitor.m in Sources */,
+				5E95247A17A854BD00B174C2 /* document.cpp in Sources */,
+				5E95247C17A854BD00B174C2 /* element.cpp in Sources */,
+				5E95247E17A854BD00B174C2 /* parser.cpp in Sources */,
+				5E95248617A854CC00B174C2 /* array.c in Sources */,
+				5E95248817A854CC00B174C2 /* buffer.c in Sources */,
+				5E95248A17A854CC00B174C2 /* markdown.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,12 +416,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5ED7EA6117A31FBE00CC7087 /* BypassTests.m in Sources */,
-				5ED7EA7717A3234D00CC7087 /* array.c in Sources */,
-				5ED7EA7917A3234D00CC7087 /* buffer.c in Sources */,
-				5ED7EA7B17A3234D00CC7087 /* markdown.c in Sources */,
-				5ED7EA8317A3236900CC7087 /* document.cpp in Sources */,
-				5ED7EA8517A3236900CC7087 /* element.cpp in Sources */,
-				5ED7EA8717A3236900CC7087 /* parser.cpp in Sources */,
 				5ED7EAB117A3241800CC7087 /* BPAttributedTextVisitor.m in Sources */,
 				5ED7EAB317A3241800CC7087 /* BPDisplaySettings.m in Sources */,
 				5ED7EAB517A3241800CC7087 /* BPDocument.mm in Sources */,
@@ -420,6 +423,12 @@
 				5ED7EAB917A3241800CC7087 /* BPElementWalker.m in Sources */,
 				5ED7EABB17A3241800CC7087 /* BPTextVisitor.m in Sources */,
 				5ED7EAC517A3253B00CC7087 /* BPParser.mm in Sources */,
+				5E95247B17A854BD00B174C2 /* document.cpp in Sources */,
+				5E95247D17A854BD00B174C2 /* element.cpp in Sources */,
+				5E95247F17A854BD00B174C2 /* parser.cpp in Sources */,
+				5E95248717A854CC00B174C2 /* array.c in Sources */,
+				5E95248917A854CC00B174C2 /* buffer.c in Sources */,
+				5E95248B17A854CC00B174C2 /* markdown.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +480,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -493,6 +503,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -504,7 +515,7 @@
 				DSTROOT = /tmp/Bypass.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bypass/Bypass-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -516,7 +527,7 @@
 				DSTROOT = /tmp/Bypass.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bypass/Bypass-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -571,6 +582,7 @@
 				5ED7EA6617A31FBE00CC7087 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5ED7EA6717A31FBE00CC7087 /* Build configuration list for PBXNativeTarget "BypassTests" */ = {
 			isa = XCConfigurationList;
@@ -579,6 +591,7 @@
 				5ED7EA6917A31FBE00CC7087 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
