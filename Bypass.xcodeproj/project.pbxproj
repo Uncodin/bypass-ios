@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E95247A17A854BD00B174C2 /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E95247417A854BD00B174C2 /* document.cpp */; };
+		5E95247B17A854BD00B174C2 /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E95247417A854BD00B174C2 /* document.cpp */; };
+		5E95247C17A854BD00B174C2 /* element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E95247617A854BD00B174C2 /* element.cpp */; };
+		5E95247D17A854BD00B174C2 /* element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E95247617A854BD00B174C2 /* element.cpp */; };
+		5E95247E17A854BD00B174C2 /* parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E95247817A854BD00B174C2 /* parser.cpp */; };
+		5E95247F17A854BD00B174C2 /* parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E95247817A854BD00B174C2 /* parser.cpp */; };
+		5E95248617A854CC00B174C2 /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E95248017A854CC00B174C2 /* array.c */; };
+		5E95248717A854CC00B174C2 /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E95248017A854CC00B174C2 /* array.c */; };
+		5E95248817A854CC00B174C2 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E95248217A854CC00B174C2 /* buffer.c */; };
+		5E95248917A854CC00B174C2 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E95248217A854CC00B174C2 /* buffer.c */; };
+		5E95248A17A854CC00B174C2 /* markdown.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E95248417A854CC00B174C2 /* markdown.c */; };
+		5E95248B17A854CC00B174C2 /* markdown.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E95248417A854CC00B174C2 /* markdown.c */; };
 		5ED7EA4317A31FBE00CC7087 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED7EA4217A31FBE00CC7087 /* Foundation.framework */; };
 		5ED7EA4817A31FBE00CC7087 /* Bypass.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5ED7EA4717A31FBE00CC7087 /* Bypass.h */; };
 		5ED7EA5217A31FBE00CC7087 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED7EA5117A31FBE00CC7087 /* SenTestingKit.framework */; };
@@ -33,7 +45,6 @@
 		5ED7EAC517A3253B00CC7087 /* BPParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAC317A3253B00CC7087 /* BPParser.mm */; };
 		5ED7EACA17A3257200CC7087 /* BPAccessibilityElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAC717A3257200CC7087 /* BPAccessibilityElement.m */; };
 		5ED7EACB17A3257200CC7087 /* BPAccessibilityVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAC917A3257200CC7087 /* BPAccessibilityVisitor.m */; };
-		8549DF7DA5B5411E96B93E50 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E0E76B8A344E6A87D0657C /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +71,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5E95247417A854BD00B174C2 /* document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = document.cpp; path = "Libraries/bypass-core/src/document.cpp"; sourceTree = SOURCE_ROOT; };
+		5E95247517A854BD00B174C2 /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = document.h; path = "Libraries/bypass-core/src/document.h"; sourceTree = SOURCE_ROOT; };
+		5E95247617A854BD00B174C2 /* element.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = element.cpp; path = "Libraries/bypass-core/src/element.cpp"; sourceTree = SOURCE_ROOT; };
+		5E95247717A854BD00B174C2 /* element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = element.h; path = "Libraries/bypass-core/src/element.h"; sourceTree = SOURCE_ROOT; };
+		5E95247817A854BD00B174C2 /* parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = parser.cpp; path = "Libraries/bypass-core/src/parser.cpp"; sourceTree = SOURCE_ROOT; };
+		5E95247917A854BD00B174C2 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = parser.h; path = "Libraries/bypass-core/src/parser.h"; sourceTree = SOURCE_ROOT; };
+		5E95248017A854CC00B174C2 /* array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = array.c; path = "Libraries/bypass-core/src/soldout/array.c"; sourceTree = SOURCE_ROOT; };
+		5E95248117A854CC00B174C2 /* array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = array.h; path = "Libraries/bypass-core/src/soldout/array.h"; sourceTree = SOURCE_ROOT; };
+		5E95248217A854CC00B174C2 /* buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = buffer.c; path = "Libraries/bypass-core/src/soldout/buffer.c"; sourceTree = SOURCE_ROOT; };
+		5E95248317A854CC00B174C2 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buffer.h; path = "Libraries/bypass-core/src/soldout/buffer.h"; sourceTree = SOURCE_ROOT; };
+		5E95248417A854CC00B174C2 /* markdown.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = markdown.c; path = "Libraries/bypass-core/src/soldout/markdown.c"; sourceTree = SOURCE_ROOT; };
+		5E95248517A854CC00B174C2 /* markdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = markdown.h; path = "Libraries/bypass-core/src/soldout/markdown.h"; sourceTree = SOURCE_ROOT; };
 		5ED7EA3F17A31FBD00CC7087 /* libBypass.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBypass.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED7EA4217A31FBE00CC7087 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5ED7EA4617A31FBE00CC7087 /* Bypass-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bypass-Prefix.pch"; sourceTree = "<group>"; };
@@ -95,7 +118,6 @@
 		5ED7EAC717A3257200CC7087 /* BPAccessibilityElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPAccessibilityElement.m; sourceTree = "<group>"; };
 		5ED7EAC817A3257200CC7087 /* BPAccessibilityVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPAccessibilityVisitor.h; sourceTree = "<group>"; };
 		5ED7EAC917A3257200CC7087 /* BPAccessibilityVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPAccessibilityVisitor.m; sourceTree = "<group>"; };
-		67E0E76B8A344E6A87D0657C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +126,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5ED7EA4317A31FBE00CC7087 /* Foundation.framework in Frameworks */,
-				8549DF7DA5B5411E96B93E50 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,11 +143,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E95247217A854A100B174C2 /* BypassCore */ = {
+			isa = PBXGroup;
+			children = (
+				5E95247417A854BD00B174C2 /* document.cpp */,
+				5E95247517A854BD00B174C2 /* document.h */,
+				5E95247617A854BD00B174C2 /* element.cpp */,
+				5E95247717A854BD00B174C2 /* element.h */,
+				5E95247817A854BD00B174C2 /* parser.cpp */,
+				5E95247917A854BD00B174C2 /* parser.h */,
+				5E95247317A854A900B174C2 /* libsoldout */,
+			);
+			name = BypassCore;
+			sourceTree = "<group>";
+		};
+		5E95247317A854A900B174C2 /* libsoldout */ = {
+			isa = PBXGroup;
+			children = (
+				5E95248017A854CC00B174C2 /* array.c */,
+				5E95248117A854CC00B174C2 /* array.h */,
+				5E95248217A854CC00B174C2 /* buffer.c */,
+				5E95248317A854CC00B174C2 /* buffer.h */,
+				5E95248417A854CC00B174C2 /* markdown.c */,
+				5E95248517A854CC00B174C2 /* markdown.h */,
+			);
+			name = libsoldout;
+			sourceTree = "<group>";
+		};
 		5ED7EA3617A31FBD00CC7087 = {
 			isa = PBXGroup;
 			children = (
 				5ED7EA4417A31FBE00CC7087 /* Bypass */,
 				5ED7EA5917A31FBE00CC7087 /* BypassTests */,
+				5ED7F1F417A84FEE00621F90 /* Libraries */,
 				5ED7EA4117A31FBD00CC7087 /* Frameworks */,
 				5ED7EA4017A31FBD00CC7087 /* Products */,
 			);
@@ -147,7 +196,6 @@
 				5ED7EA4217A31FBE00CC7087 /* Foundation.framework */,
 				5ED7EA5117A31FBE00CC7087 /* SenTestingKit.framework */,
 				5ED7EA5317A31FBE00CC7087 /* UIKit.framework */,
-				67E0E76B8A344E6A87D0657C /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,6 +203,7 @@
 		5ED7EA4417A31FBE00CC7087 /* Bypass */ = {
 			isa = PBXGroup;
 			children = (
+				5E95247217A854A100B174C2 /* BypassCore */,
 				5ED7EA4717A31FBE00CC7087 /* Bypass.h */,
 				5ED7EA6B17A3204200CC7087 /* Accessibility */,
 				5ED7EA6D17A3207D00CC7087 /* View */,
@@ -236,6 +285,14 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		5ED7F1F417A84FEE00621F90 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			path = BypassTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -243,11 +300,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5ED7EA6417A31FBE00CC7087 /* Build configuration list for PBXNativeTarget "Bypass" */;
 			buildPhases = (
-				BBB4FE0B640A4D2980982AA5 /* Check Pods Manifest.lock */,
 				5ED7EA3B17A31FBD00CC7087 /* Sources */,
 				5ED7EA3C17A31FBD00CC7087 /* Frameworks */,
 				5ED7EA3D17A31FBD00CC7087 /* CopyFiles */,
-				509951AF76B34318ADD0840B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -316,21 +371,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		509951AF76B34318ADD0840B /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5ED7EA4E17A31FBE00CC7087 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -343,21 +383,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-		BBB4FE0B640A4D2980982AA5 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -377,6 +402,12 @@
 				5ED7EAC417A3253B00CC7087 /* BPParser.mm in Sources */,
 				5ED7EACA17A3257200CC7087 /* BPAccessibilityElement.m in Sources */,
 				5ED7EACB17A3257200CC7087 /* BPAccessibilityVisitor.m in Sources */,
+				5E95247A17A854BD00B174C2 /* document.cpp in Sources */,
+				5E95247C17A854BD00B174C2 /* element.cpp in Sources */,
+				5E95247E17A854BD00B174C2 /* parser.cpp in Sources */,
+				5E95248617A854CC00B174C2 /* array.c in Sources */,
+				5E95248817A854CC00B174C2 /* buffer.c in Sources */,
+				5E95248A17A854CC00B174C2 /* markdown.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +423,12 @@
 				5ED7EAB917A3241800CC7087 /* BPElementWalker.m in Sources */,
 				5ED7EABB17A3241800CC7087 /* BPTextVisitor.m in Sources */,
 				5ED7EAC517A3253B00CC7087 /* BPParser.mm in Sources */,
+				5E95247B17A854BD00B174C2 /* document.cpp in Sources */,
+				5E95247D17A854BD00B174C2 /* element.cpp in Sources */,
+				5E95247F17A854BD00B174C2 /* parser.cpp in Sources */,
+				5E95248717A854CC00B174C2 /* array.c in Sources */,
+				5E95248917A854CC00B174C2 /* buffer.c in Sources */,
+				5E95248B17A854CC00B174C2 /* markdown.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
