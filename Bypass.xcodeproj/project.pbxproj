@@ -120,7 +120,6 @@
 		5ED7EAC817A3257200CC7087 /* BPAccessibilityVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPAccessibilityVisitor.h; sourceTree = "<group>"; };
 		5ED7EAC917A3257200CC7087 /* BPAccessibilityVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPAccessibilityVisitor.m; sourceTree = "<group>"; };
 		67E0E76B8A344E6A87D0657C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C45392215CC142B58BBE514D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +153,6 @@
 				5ED7EA5917A31FBE00CC7087 /* BypassTests */,
 				5ED7EA4117A31FBD00CC7087 /* Frameworks */,
 				5ED7EA4017A31FBD00CC7087 /* Products */,
-				C45392215CC142B58BBE514D /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -540,7 +538,6 @@
 		};
 		5ED7EA6517A31FBE00CC7087 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C45392215CC142B58BBE514D /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/Bypass.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -553,7 +550,6 @@
 		};
 		5ED7EA6617A31FBE00CC7087 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C45392215CC142B58BBE514D /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/Bypass.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
