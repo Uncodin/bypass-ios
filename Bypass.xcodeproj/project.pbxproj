@@ -203,8 +203,8 @@
 		5ED7EA4417A31FBE00CC7087 /* Bypass */ = {
 			isa = PBXGroup;
 			children = (
-				5E95247217A854A100B174C2 /* BypassCore */,
 				5ED7EA4717A31FBE00CC7087 /* Bypass.h */,
+				5E95247217A854A100B174C2 /* BypassCore */,
 				5ED7EA6B17A3204200CC7087 /* Accessibility */,
 				5ED7EA6D17A3207D00CC7087 /* View */,
 				5ED7EA6C17A3205200CC7087 /* Model */,
