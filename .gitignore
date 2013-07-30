@@ -1,10 +1,6 @@
-build
 *.pbxuser
 *.mode1v3
-docs
 .DS_Store
 xcuserdata
 xcshareddata
-build.properties
-Nowtu-Version.plist
 *~
