@@ -6,5 +6,7 @@ docs
 xcuserdata
 xcshareddata
 build.properties
-Nowtu-Version.plist
 *~
+Bypass.xcworkspace
+Podfile.lock
+Pods

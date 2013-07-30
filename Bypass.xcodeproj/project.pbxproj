@@ -45,6 +45,7 @@
 		5ED7EAC517A3253B00CC7087 /* BPParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAC317A3253B00CC7087 /* BPParser.mm */; };
 		5ED7EACA17A3257200CC7087 /* BPAccessibilityElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAC717A3257200CC7087 /* BPAccessibilityElement.m */; };
 		5ED7EACB17A3257200CC7087 /* BPAccessibilityVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAC917A3257200CC7087 /* BPAccessibilityVisitor.m */; };
+		8549DF7DA5B5411E96B93E50 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E0E76B8A344E6A87D0657C /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,8 @@
 		5ED7EAC717A3257200CC7087 /* BPAccessibilityElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPAccessibilityElement.m; sourceTree = "<group>"; };
 		5ED7EAC817A3257200CC7087 /* BPAccessibilityVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPAccessibilityVisitor.h; sourceTree = "<group>"; };
 		5ED7EAC917A3257200CC7087 /* BPAccessibilityVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPAccessibilityVisitor.m; sourceTree = "<group>"; };
+		67E0E76B8A344E6A87D0657C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C45392215CC142B58BBE514D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5ED7EA4317A31FBE00CC7087 /* Foundation.framework in Frameworks */,
+				8549DF7DA5B5411E96B93E50 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +154,7 @@
 				5ED7EA5917A31FBE00CC7087 /* BypassTests */,
 				5ED7EA4117A31FBD00CC7087 /* Frameworks */,
 				5ED7EA4017A31FBD00CC7087 /* Products */,
+				C45392215CC142B58BBE514D /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,6 +173,7 @@
 				5ED7EA4217A31FBE00CC7087 /* Foundation.framework */,
 				5ED7EA5117A31FBE00CC7087 /* SenTestingKit.framework */,
 				5ED7EA5317A31FBE00CC7087 /* UIKit.framework */,
+				67E0E76B8A344E6A87D0657C /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -291,9 +297,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5ED7EA6417A31FBE00CC7087 /* Build configuration list for PBXNativeTarget "Bypass" */;
 			buildPhases = (
+				BBB4FE0B640A4D2980982AA5 /* Check Pods Manifest.lock */,
 				5ED7EA3B17A31FBD00CC7087 /* Sources */,
 				5ED7EA3C17A31FBD00CC7087 /* Frameworks */,
 				5ED7EA3D17A31FBD00CC7087 /* CopyFiles */,
+				509951AF76B34318ADD0840B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -362,6 +370,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		509951AF76B34318ADD0840B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5ED7EA4E17A31FBE00CC7087 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,6 +397,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		BBB4FE0B640A4D2980982AA5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -471,6 +509,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -493,6 +532,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -500,11 +540,12 @@
 		};
 		5ED7EA6517A31FBE00CC7087 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C45392215CC142B58BBE514D /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/Bypass.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bypass/Bypass-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -512,11 +553,12 @@
 		};
 		5ED7EA6617A31FBE00CC7087 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C45392215CC142B58BBE514D /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/Bypass.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bypass/Bypass-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -571,6 +613,7 @@
 				5ED7EA6617A31FBE00CC7087 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5ED7EA6717A31FBE00CC7087 /* Build configuration list for PBXNativeTarget "BypassTests" */ = {
 			isa = XCConfigurationList;
@@ -579,6 +622,7 @@
 				5ED7EA6917A31FBE00CC7087 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
