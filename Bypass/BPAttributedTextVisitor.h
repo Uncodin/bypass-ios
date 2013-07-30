@@ -21,7 +21,6 @@
 #import <Foundation/Foundation.h>
 #import <CoreText/CoreText.h>
 #import <UIKit/UIKit.h>
-#import "Bypass.h"
 #import "BPElementWalker.h"
 
 OBJC_EXPORT NSString* const BPLinkStyleAttributeName;

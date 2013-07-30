@@ -140,7 +140,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5E95247217A854A100B174C2 /* BypassCore */ = {
+		5E95247217A854A100B174C2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				5E95247417A854BD00B174C2 /* document.cpp */,
@@ -151,7 +151,7 @@
 				5E95247917A854BD00B174C2 /* parser.h */,
 				5E95247317A854A900B174C2 /* libsoldout */,
 			);
-			name = BypassCore;
+			name = Core;
 			sourceTree = "<group>";
 		};
 		5E95247317A854A900B174C2 /* libsoldout */ = {
@@ -200,7 +200,7 @@
 		5ED7EA4417A31FBE00CC7087 /* Bypass */ = {
 			isa = PBXGroup;
 			children = (
-				5E95247217A854A100B174C2 /* BypassCore */,
+				5E95247217A854A100B174C2 /* Core */,
 				5ED7EA6B17A3204200CC7087 /* Accessibility */,
 				5ED7EA6D17A3207D00CC7087 /* View */,
 				5ED7EA6C17A3205200CC7087 /* Model */,
@@ -508,7 +508,10 @@
 		5ED7EA6517A31FBE00CC7087 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				DSTROOT = /tmp/Bypass.dst;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bypass/Bypass-Prefix.pch";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -520,7 +523,10 @@
 		5ED7EA6617A31FBE00CC7087 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				DSTROOT = /tmp/Bypass.dst;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bypass/Bypass-Prefix.pch";
 				OTHER_LDFLAGS = "$(inherited)";
