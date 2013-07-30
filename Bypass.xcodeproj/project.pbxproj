@@ -20,7 +20,6 @@
 		5E95248A17A854CC00B174C2 /* markdown.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E95248417A854CC00B174C2 /* markdown.c */; };
 		5E95248B17A854CC00B174C2 /* markdown.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E95248417A854CC00B174C2 /* markdown.c */; };
 		5ED7EA4317A31FBE00CC7087 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED7EA4217A31FBE00CC7087 /* Foundation.framework */; };
-		5ED7EA4817A31FBE00CC7087 /* Bypass.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5ED7EA4717A31FBE00CC7087 /* Bypass.h */; };
 		5ED7EA5217A31FBE00CC7087 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED7EA5117A31FBE00CC7087 /* SenTestingKit.framework */; };
 		5ED7EA5417A31FBE00CC7087 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED7EA5317A31FBE00CC7087 /* UIKit.framework */; };
 		5ED7EA5517A31FBE00CC7087 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED7EA4217A31FBE00CC7087 /* Foundation.framework */; };
@@ -64,7 +63,6 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				5ED7EA4817A31FBE00CC7087 /* Bypass.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +84,6 @@
 		5ED7EA3F17A31FBD00CC7087 /* libBypass.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBypass.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED7EA4217A31FBE00CC7087 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5ED7EA4617A31FBE00CC7087 /* Bypass-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bypass-Prefix.pch"; sourceTree = "<group>"; };
-		5ED7EA4717A31FBE00CC7087 /* Bypass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bypass.h; sourceTree = "<group>"; };
 		5ED7EA5017A31FBE00CC7087 /* BypassTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BypassTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED7EA5117A31FBE00CC7087 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		5ED7EA5317A31FBE00CC7087 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -203,7 +200,6 @@
 		5ED7EA4417A31FBE00CC7087 /* Bypass */ = {
 			isa = PBXGroup;
 			children = (
-				5ED7EA4717A31FBE00CC7087 /* Bypass.h */,
 				5E95247217A854A100B174C2 /* BypassCore */,
 				5ED7EA6B17A3204200CC7087 /* Accessibility */,
 				5ED7EA6D17A3207D00CC7087 /* View */,

@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 Uncodin, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@interface Bypass : NSObject
-
-@end
+#import <UIKit/UIKit.h>
+#import <Bypass/BPDisplaySettings.h>
+#import <Bypass/BPMarkdownView.h>
