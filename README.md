@@ -46,7 +46,7 @@ pod 'Bypass', '~> 1.0.1'
   * Add `-ObjC` to `Other Linker Flags`
 * Navigate to your project's Build Phases
   * Add `Bypass` as a target dependency
-  * Lower down in the same tab, add `QuartzCore.framework`, `CoreText.framework`, and `libBypass.a` to the list of libraries to link againts.
+  * In the same tab, add `QuartzCore.framework`, `CoreText.framework`, and `libBypass.a` to the list of libraries to link against.
 
 ## Usage
 
