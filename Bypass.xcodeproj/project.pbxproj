@@ -44,6 +44,7 @@
 		5ED7EAC517A3253B00CC7087 /* BPParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAC317A3253B00CC7087 /* BPParser.mm */; };
 		5ED7EACA17A3257200CC7087 /* BPAccessibilityElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAC717A3257200CC7087 /* BPAccessibilityElement.m */; };
 		5ED7EACB17A3257200CC7087 /* BPAccessibilityVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED7EAC917A3257200CC7087 /* BPAccessibilityVisitor.m */; };
+		9BF7A72D17AA694500819735 /* BPAttributedStringConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7A72C17AA694300819735 /* BPAttributedStringConverter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,9 @@
 		5ED7EAC717A3257200CC7087 /* BPAccessibilityElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPAccessibilityElement.m; sourceTree = "<group>"; };
 		5ED7EAC817A3257200CC7087 /* BPAccessibilityVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPAccessibilityVisitor.h; sourceTree = "<group>"; };
 		5ED7EAC917A3257200CC7087 /* BPAccessibilityVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPAccessibilityVisitor.m; sourceTree = "<group>"; };
+		9BF7A72A17AA654700819735 /* Bypass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bypass.h; sourceTree = "<group>"; };
+		9BF7A72B17AA694100819735 /* BPAttributedStringConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPAttributedStringConverter.h; sourceTree = "<group>"; };
+		9BF7A72C17AA694300819735 /* BPAttributedStringConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPAttributedStringConverter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +216,7 @@
 		5ED7EA4517A31FBE00CC7087 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9BF7A72A17AA654700819735 /* Bypass.h */,
 				5ED7EA4617A31FBE00CC7087 /* Bypass-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -250,8 +255,8 @@
 		5ED7EA6C17A3205200CC7087 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5ED7EAC217A3253B00CC7087 /* BPParser.h */,
-				5ED7EAC317A3253B00CC7087 /* BPParser.mm */,
+				9BF7A72B17AA694100819735 /* BPAttributedStringConverter.h */,
+				9BF7A72C17AA694300819735 /* BPAttributedStringConverter.m */,
 				5ED7EAA217A3241800CC7087 /* BPAttributedTextVisitor.h */,
 				5ED7EAA317A3241800CC7087 /* BPAttributedTextVisitor.m */,
 				5ED7EAA417A3241800CC7087 /* BPDisplaySettings.h */,
@@ -264,6 +269,8 @@
 				5ED7EAAB17A3241800CC7087 /* BPElementPrivate.h */,
 				5ED7EAAC17A3241800CC7087 /* BPElementWalker.h */,
 				5ED7EAAD17A3241800CC7087 /* BPElementWalker.m */,
+				5ED7EAC217A3253B00CC7087 /* BPParser.h */,
+				5ED7EAC317A3253B00CC7087 /* BPParser.mm */,
 				5ED7EAAE17A3241800CC7087 /* BPTextVisitor.h */,
 				5ED7EAAF17A3241800CC7087 /* BPTextVisitor.m */,
 			);
@@ -404,6 +411,7 @@
 				5E95248617A854CC00B174C2 /* array.c in Sources */,
 				5E95248817A854CC00B174C2 /* buffer.c in Sources */,
 				5E95248A17A854CC00B174C2 /* markdown.c in Sources */,
+				9BF7A72D17AA694500819735 /* BPAttributedStringConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
