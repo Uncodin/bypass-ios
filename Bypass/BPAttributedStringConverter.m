@@ -13,22 +13,45 @@
 #import "BPElementWalker.h"
 
 
+@interface BPAttributedStringConverter ()
+
+@property (nonatomic, strong) BPAttributedTextVisitor *visitor;
+@property (nonatomic, strong) BPElementWalker *walker;
+
+@end
+
 @implementation BPAttributedStringConverter
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        _visitor = [BPAttributedTextVisitor new];
+        _walker = [BPElementWalker new];
+        [_walker addElementVisitor:_visitor];
+    }
+    return self;
+}
 
 - (NSAttributedString *)convertDocument:(BPDocument *)document
 {
-    BPAttributedTextVisitor *visitor = [BPAttributedTextVisitor new];
-    BPElementWalker *walker = [BPElementWalker new];
+    [_visitor resetAttributedText];
+    [_walker walkDocument:document];
 
-    [visitor setDisplaySettings:self.displaySettings];
-    [walker addElementVisitor:visitor];
-    [walker walkDocument:document];
-
-    NSMutableAttributedString *attributedString = visitor.attributedText;
-    [attributedString addAttribute:NSForegroundColorAttributeName value:[_displaySettings defaultColor] range:NSMakeRange(0, attributedString.length)];
+    NSMutableAttributedString *attributedString = _visitor.attributedText;
+    [attributedString addAttribute:NSForegroundColorAttributeName
+                             value:[_visitor.displaySettings defaultColor]
+                             range:NSMakeRange(0, attributedString.length)];
 
     return attributedString;
 }
 
+- (void)setDisplaySettings:(BPDisplaySettings *)displaySettings {
+    _visitor.displaySettings = displaySettings;
+}
+
+- (BPDisplaySettings *)displaySettings {
+    return _visitor.displaySettings;
+}
 
 @end
