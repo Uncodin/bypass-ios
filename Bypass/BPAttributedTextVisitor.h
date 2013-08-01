@@ -23,11 +23,14 @@
 #import <UIKit/UIKit.h>
 #import "BPElementWalker.h"
 
+@class BPDisplaySettings;
+
 OBJC_EXPORT NSString* const BPLinkStyleAttributeName;
 
 @interface BPAttributedTextVisitor : NSObject <BPElementVisitor>
 
 @property (nonatomic, readonly) NSMutableAttributedString* attributedText;
+@property (nonatomic, strong) BPDisplaySettings *displaySettings;
 
 - (void)resetAttributedText;
 

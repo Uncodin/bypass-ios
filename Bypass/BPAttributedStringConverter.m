@@ -20,11 +20,15 @@
     BPAttributedTextVisitor *visitor = [BPAttributedTextVisitor new];
     BPElementWalker *walker = [BPElementWalker new];
 
+    [visitor setDisplaySettings:self.displaySettings];
     [walker addElementVisitor:visitor];
     [walker walkDocument:document];
 
-    NSAttributedString *attributedString = visitor.attributedText;
+    NSMutableAttributedString *attributedString = visitor.attributedText;
+    [attributedString addAttribute:NSForegroundColorAttributeName value:[_displaySettings defaultColor] range:NSMakeRange(0, attributedString.length)];
+
     return attributedString;
 }
+
 
 @end

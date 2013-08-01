@@ -20,31 +20,13 @@
 
 #import "BPAttributedTextVisitor.h"
 #import "BPElement.h"
+#import "BPDisplaySettings.h"
 
 NSString *const BPLinkStyleAttributeName = @"NSLinkAttributeName";
 
-static const CGFloat kBulletIndentation     = 13.0f;
-static const CGFloat kCodeIndentation       = 10.0f;
-static const CGFloat kQuoteIndentation      = 23.0f;
-static const CGFloat kLineSpacingSmall      =  1.2f;
-static const CGFloat kParagraphSpacingLarge = 20.0f;
-static const CGFloat kParagraphSpacingSmall = 10.0f;
-static const CGFloat kParagraphSpacingNone  =  0.0f;
 
-@implementation BPAttributedTextVisitor
-{
-    CTFontRef _defaultFont;
-    CTFontRef _boldFont;
-    CTFontRef _italicFont;
-    CTFontRef _boldItalicFont;
-    CTFontRef _monospaceFont;
-    CTFontRef _quoteFont;
-    CTFontRef _h1Font;
-    CTFontRef _h2Font;
-    CTFontRef _h3Font;
-    CTFontRef _h4Font;
-    CTFontRef _h5Font;
-    CTFontRef _h6Font;
+@implementation BPAttributedTextVisitor {
+    BOOL _renderedFirstParagraph;
 }
 
 - (id)init
@@ -53,25 +35,10 @@ static const CGFloat kParagraphSpacingNone  =  0.0f;
     
     if (self != nil) {
         _attributedText = [[NSMutableAttributedString alloc] init];
+        _displaySettings = [[BPDisplaySettings alloc] init];
     }
     
     return self;
-}
-
-- (void)dealloc
-{
-    if (_defaultFont != NULL)    CFRelease(_defaultFont);
-    if (_boldFont != NULL)       CFRelease(_boldFont);
-    if (_italicFont != NULL)     CFRelease(_italicFont);
-    if (_boldItalicFont != NULL) CFRelease(_boldItalicFont);
-    if (_monospaceFont != NULL)  CFRelease(_monospaceFont);
-    if (_quoteFont != NULL)      CFRelease(_quoteFont);
-    if (_h1Font != NULL)         CFRelease(_h1Font);
-    if (_h2Font != NULL)         CFRelease(_h2Font);
-    if (_h3Font != NULL)         CFRelease(_h3Font);
-    if (_h4Font != NULL)         CFRelease(_h4Font);
-    if (_h5Font != NULL)         CFRelease(_h5Font);
-    if (_h6Font != NULL)         CFRelease(_h6Font);
 }
 
 - (void)resetAttributedText
@@ -93,152 +60,6 @@ static const CGFloat kParagraphSpacingNone  =  0.0f;
        withTextRange:(NSRange)textRange
 {
     return [self convertElement:element toTarget:_attributedText range:textRange];
-}
-
-#pragma mark Fonts
-
-- (UIFont *)UIFontFromCTFont:(CTFontRef)ctFont
-{
-    NSString *fontName;
-    fontName = (__bridge_transfer NSString *) CTFontCopyName(ctFont, kCTFontPostScriptNameKey);
-    
-    CGFloat fontSize = CTFontGetSize(ctFont);
-    UIFont *font = [UIFont fontWithName:fontName size:fontSize];
-    return font;
-}
-
-- (CTFontRef)defaultFont
-{
-    if (_defaultFont == NULL) {
-        CGFloat systemFontSize = [UIFont systemFontSize];
-        UIFont *systemFont = [UIFont systemFontOfSize:systemFontSize];
-        CFStringRef systemFontName = (__bridge CFStringRef) [systemFont fontName];
-        
-        _defaultFont = CTFontCreateWithName(systemFontName, systemFontSize, NULL);
-    }
-    
-    return _defaultFont;
-}
-
-- (CTFontRef)boldFont
-{
-    if (_boldFont == NULL) {
-        _boldFont = CTFontCreateCopyWithSymbolicTraits([self defaultFont],
-                                                       0.f,
-                                                       NULL,
-                                                       kCTFontBoldTrait,
-                                                       kCTFontBoldTrait);
-    }
-    
-    return _boldFont;
-}
-
-- (CTFontRef)italicFont
-{
-    if (_italicFont == NULL) {
-        _italicFont = CTFontCreateCopyWithSymbolicTraits([self defaultFont],
-                                                         0.f,
-                                                         NULL,
-                                                         kCTFontItalicTrait,
-                                                         kCTFontItalicTrait);
-    }
-    
-    return _italicFont;
-}
-
-- (CTFontRef)boldItalicFont
-{
-    if (_boldItalicFont == NULL) {
-        CTFontSymbolicTraits traits = kCTFontBoldTrait | kCTFontItalicTrait;
-        CTFontSymbolicTraits mask = kCTFontBoldTrait | kCTFontItalicTrait;
-        _boldItalicFont = CTFontCreateCopyWithSymbolicTraits([self defaultFont],
-                                                             0.f,
-                                                             NULL,
-                                                             traits,
-                                                             mask);
-    }
-    
-    return _boldItalicFont;
-}
-
-- (CTFontRef)monospaceFont
-{
-    if (_monospaceFont == NULL) {
-        _monospaceFont = CTFontCreateWithName(CFSTR("Courier"),
-                                              CTFontGetSize([self defaultFont]) - 2, NULL);
-    }
-    
-    return _monospaceFont;
-}
-
-- (CTFontRef)quoteFont
-{
-    if (_quoteFont == NULL) {
-        _quoteFont = CTFontCreateWithName(CFSTR("Marion-Italic"),
-                                          CTFontGetSize([self defaultFont]) + 2, NULL);
-    }
-    
-    return _quoteFont;
-}
-
-- (CTFontRef)h1Font
-{
-    if (_h1Font == NULL) {
-        _h1Font = CTFontCreateWithName(CFSTR("HelveticaNeue-CondensedBold"),
-                                       CTFontGetSize([self defaultFont]) * 2, NULL);
-    }
-    
-    return _h1Font;
-}
-
-- (CTFontRef)h2Font
-{
-    if (_h2Font == NULL) {
-        _h2Font = CTFontCreateWithName(CFSTR("HelveticaNeue-CondensedBold"),
-                                       CTFontGetSize([self defaultFont]) * 1.8, NULL);
-    }
-    
-    return _h2Font;
-}
-
-- (CTFontRef)h3Font
-{
-    if (_h3Font == NULL) {
-        _h3Font = CTFontCreateWithName(CFSTR("HelveticaNeue-CondensedBold"),
-                                       CTFontGetSize([self defaultFont]) * 1.6, NULL);
-    }
-    
-    return _h3Font;
-}
-
-- (CTFontRef)h4Font
-{
-    if (_h4Font == NULL) {
-        _h4Font = CTFontCreateWithName(CFSTR("HelveticaNeue-CondensedBold"),
-                                       CTFontGetSize([self defaultFont]) * 1.4, NULL);
-    }
-    
-    return _h4Font;
-}
-
-- (CTFontRef)h5Font
-{
-    if (_h5Font == NULL) {
-        _h5Font = CTFontCreateWithName(CFSTR("HelveticaNeue-CondensedBold"),
-                                       CTFontGetSize([self defaultFont]) * 1.2, NULL);
-    }
-    
-    return _h5Font;
-}
-
-- (CTFontRef)h6Font
-{
-    if (_h6Font == NULL) {
-        _h6Font = CTFontCreateWithName(CFSTR("HelveticaNeue-CondensedBold"),
-                                       CTFontGetSize([self defaultFont]) * 1, NULL);
-    }
-    
-    return _h6Font;
 }
 
 #pragma mark Rendering
@@ -319,7 +140,7 @@ static const CGFloat kParagraphSpacingNone  =  0.0f;
                       atIndex:(int)index
 {
     NSDictionary *bulletAttributes = @{
-                                       NSFontAttributeName            : [self UIFontFromCTFont:[self monospaceFont]],
+                                       NSFontAttributeName            : [_displaySettings monospaceFont],
                                        NSForegroundColorAttributeName : bulletColor
                                        };
     
@@ -335,7 +156,7 @@ static const CGFloat kParagraphSpacingNone  =  0.0f;
 #pragma mark Span Element Rendering
 
 - (void)renderSpanElement:(BPElement *)element
-                 withFont:(CTFontRef)font
+                 withFont:(UIFont *)font
                  toTarget:(NSMutableAttributedString *)target
 {
     [self renderSpanElement:element
@@ -345,11 +166,11 @@ static const CGFloat kParagraphSpacingNone  =  0.0f;
 }
 
 - (void)renderSpanElement:(BPElement *)element
-                 withFont:(CTFontRef)font
+                 withFont:(UIFont *)font
                attributes:(NSMutableDictionary *)attributes
                  toTarget:(NSMutableAttributedString *)target
 {
-    attributes[NSFontAttributeName] = [self UIFontFromCTFont:font];
+    attributes[NSFontAttributeName] = font;
     
     NSString *text;
     
@@ -361,39 +182,52 @@ static const CGFloat kParagraphSpacingNone  =  0.0f;
     } else {
         text = [[element text] stringByReplacingOccurrencesOfString:@"\n" withString:@" "];
     }
-    
-    NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:text
-                                                                         attributes:attributes];
-    [target appendAttributedString:attributedText];
+
+    if (text != nil) {
+        NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:text
+                                                                             attributes:attributes];
+        [target appendAttributedString:attributedText];
+    }
 }
 
 - (void)renderTextElement:(BPElement *)element toTarget:(NSMutableAttributedString *)target
 {
-    [self renderSpanElement:element withFont:[self defaultFont] toTarget:target];
+    [self renderSpanElement:element withFont:[_displaySettings defaultFont] toTarget:target];
 }
 
 - (void)renderBoldItalicElement:(BPElement *)element
                        toTarget:(NSMutableAttributedString *)target
 {
-    [self renderSpanElement:element withFont:[self boldItalicFont] toTarget:target];
+    [self renderSpanElement:element withFont:[_displaySettings boldItalicFont] toTarget:target];
 }
 
 - (void)renderBoldElement:(BPElement *)element
                  toTarget:(NSMutableAttributedString *)target
 {
-    [self renderSpanElement:element withFont:[self boldFont] toTarget:target];
+    [self renderSpanElement:element withFont:[_displaySettings boldFont] toTarget:target];
 }
 
 - (void)renderItalicElement:(BPElement *)element
                    toTarget:(NSMutableAttributedString *)target
 {
-    [self renderSpanElement:element withFont:[self italicFont] toTarget:target];
+    [self renderSpanElement:element withFont:[_displaySettings italicFont] toTarget:target];
+}
+
+- (void)renderStruckthroughElement:(BPElement *)element
+                          toTarget:(NSMutableAttributedString *)target
+{
+    NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
+    attributes[NSStrikethroughStyleAttributeName] = @(1);
+    [self renderSpanElement:element
+                   withFont:[_displaySettings defaultFont]
+                 attributes:attributes
+                   toTarget:target];
 }
 
 - (void)renderCodeSpanElement:(BPElement *)element
                      toTarget:(NSMutableAttributedString *)target
 {
-    [self renderSpanElement:element withFont:[self monospaceFont] toTarget:target];
+    [self renderSpanElement:element withFont:[_displaySettings monospaceFont] toTarget:target];
 }
 
 - (void)renderLinkElement:(BPElement *)element
@@ -401,10 +235,10 @@ static const CGFloat kParagraphSpacingNone  =  0.0f;
 {
     NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
     attributes[NSUnderlineStyleAttributeName] = @(NSUnderlineStyleSingle);
-    attributes[NSForegroundColorAttributeName] = [UIColor blueColor];
+    attributes[NSForegroundColorAttributeName] = [_displaySettings linkColor];
     attributes[BPLinkStyleAttributeName] = element[@"link"];
     [self renderSpanElement:element
-                   withFont:_defaultFont
+                   withFont:[_displaySettings defaultFont]
                  attributes:attributes toTarget:target];
 }
 
@@ -421,13 +255,14 @@ static const CGFloat kParagraphSpacingNone  =  0.0f;
                        toTarget:(NSMutableAttributedString *)target
 {
     NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
-    attributes[NSFontAttributeName] = [self UIFontFromCTFont:[self quoteFont]];
+    attributes[NSFontAttributeName] = [_displaySettings quoteFont];
+    attributes[NSForegroundColorAttributeName] = [_displaySettings quoteColor];
     
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    [paragraphStyle setParagraphSpacing:kParagraphSpacingSmall];
-    [paragraphStyle setFirstLineHeadIndent:kQuoteIndentation];
-    [paragraphStyle setHeadIndent:kQuoteIndentation];
-    [paragraphStyle setTailIndent:-kQuoteIndentation];
+    [paragraphStyle setParagraphSpacing:[_displaySettings paragraphSpacingHeading]];
+    [paragraphStyle setFirstLineHeadIndent:[_displaySettings quoteIndentation]];
+    [paragraphStyle setHeadIndent:[_displaySettings quoteIndentation]];
+    [paragraphStyle setTailIndent:-[_displaySettings quoteIndentation]];
     attributes[NSParagraphStyleAttributeName] = paragraphStyle;
     
     [target addAttributes:attributes range:effectiveRange];
@@ -440,14 +275,14 @@ static const CGFloat kParagraphSpacingNone  =  0.0f;
     int insertedCharacters = 0;
     
     NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
-    attributes[NSFontAttributeName] = [self UIFontFromCTFont:[self monospaceFont]];
-    attributes[NSForegroundColorAttributeName] = [UIColor grayColor];
+    attributes[NSFontAttributeName] = [_displaySettings monospaceFont];
+    attributes[NSForegroundColorAttributeName] = [_displaySettings codeColor];
     
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    [paragraphStyle setParagraphSpacing:kParagraphSpacingNone];
-    [paragraphStyle setFirstLineHeadIndent:kCodeIndentation];
-    [paragraphStyle setHeadIndent:kCodeIndentation];
-    [paragraphStyle setTailIndent:-kCodeIndentation];
+    [paragraphStyle setParagraphSpacing:[_displaySettings paragraphSpacingCode]];
+    [paragraphStyle setFirstLineHeadIndent:[_displaySettings codeIndentation]];
+    [paragraphStyle setHeadIndent:[_displaySettings codeIndentation]];
+    [paragraphStyle setTailIndent:-[_displaySettings codeIndentation]];
     attributes[NSParagraphStyleAttributeName] = paragraphStyle;
     
     [target addAttributes:attributes range:effectiveRange];
@@ -461,9 +296,16 @@ static const CGFloat kParagraphSpacingNone  =  0.0f;
                        inRange:(NSRange)effectiveRange
                       toTarget:(NSMutableAttributedString *)target
 {
-    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    [paragraphStyle setParagraphSpacing:kParagraphSpacingLarge];
-    [paragraphStyle setLineSpacing:1.1f];
+     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragraphStyle setParagraphSpacing:[_displaySettings paragraphSpacing]];
+    [paragraphStyle setLineSpacing:[_displaySettings paragraphLineSpacing]];
+    [paragraphStyle setFirstLineHeadIndent:[_displaySettings paragraphFirstLineHeadIndent]];
+
+    if (!_renderedFirstParagraph) {
+        [paragraphStyle setFirstLineHeadIndent:[_displaySettings firstParagraphFirstLineHeadIndent]];
+        _renderedFirstParagraph = YES;
+    }
+    [paragraphStyle setHeadIndent:[_displaySettings paragraphHeadIndent]];
     
     NSDictionary *attributes = @{NSParagraphStyleAttributeName : paragraphStyle};
     [target addAttributes:attributes range:effectiveRange];
@@ -506,10 +348,10 @@ static const CGFloat kParagraphSpacingNone  =  0.0f;
     insertedCharacters += [self insertBulletIntoTarget:target color:bulletColor atIndex:effectiveRange.location];
     
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    [paragraphStyle setLineSpacing:kLineSpacingSmall];
+     [paragraphStyle setLineSpacing:[_displaySettings lineSpacingSmall]];
     
     NSDictionary *indentationAttributes = @{
-                                            NSFontAttributeName : [UIFont systemFontOfSize:kBulletIndentation],
+                                            NSFontAttributeName : [UIFont systemFontOfSize:[_displaySettings bulletIndentation]],
                                             NSParagraphStyleAttributeName : paragraphStyle
                                             };
     
@@ -533,7 +375,10 @@ static const CGFloat kParagraphSpacingNone  =  0.0f;
 {
     NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    [paragraphStyle setParagraphSpacing:kParagraphSpacingSmall];
+    [paragraphStyle setParagraphSpacing:[_displaySettings paragraphSpacingHeading]];
+    [paragraphStyle setLineSpacing:[_displaySettings paragraphLineSpacingHeading]];
+    [paragraphStyle setFirstLineHeadIndent:[_displaySettings headerFirstLineHeadIndent]];
+    [paragraphStyle setHeadIndent:[_displaySettings headerHeadIndent]];
     
     attributes[NSParagraphStyleAttributeName] = paragraphStyle;
     
@@ -541,25 +386,26 @@ static const CGFloat kParagraphSpacingNone  =  0.0f;
     
     switch ([element[@"level"] integerValue]) {
         case 1:
-            attributes[NSFontAttributeName] = [self UIFontFromCTFont:[self h1Font]];
+            attributes[NSFontAttributeName] = [_displaySettings h1Font];
             break;
         case 2:
-            attributes[NSFontAttributeName] = [self UIFontFromCTFont:[self h2Font]];
+            [paragraphStyle setParagraphSpacing:[_displaySettings paragraphSpacingH2]];
+            attributes[NSFontAttributeName] = [_displaySettings h2Font];
             break;
         case 3:
-            attributes[NSFontAttributeName] = [self UIFontFromCTFont:[self h3Font]];
+            attributes[NSFontAttributeName] = [_displaySettings h3Font];
             break;
         case 4:
-            attributes[NSFontAttributeName] = [self UIFontFromCTFont:[self h4Font]];
+            attributes[NSFontAttributeName] = [_displaySettings h4Font];
             break;
         case 5:
-            attributes[NSFontAttributeName] = [self UIFontFromCTFont:[self h5Font]];
+            attributes[NSFontAttributeName] = [_displaySettings h5Font];
             break;
         case 6:
-            attributes[NSFontAttributeName] = [self UIFontFromCTFont:[self h6Font]];
+            attributes[NSFontAttributeName] = [_displaySettings h6Font];
             break;
         default:
-            attributes[NSFontAttributeName] = [self UIFontFromCTFont:[self defaultFont]];
+            attributes[NSFontAttributeName] = [_displaySettings defaultFont];
             break;
     }
     
