@@ -88,6 +88,11 @@ static const CGFloat kParagraphSpacingNone  =  0.0f;
     if (_h6Font != NULL)         CFRelease(_h6Font);
 }
 
+- (void)resetAttributedText
+{
+    _attributedText = [[NSMutableAttributedString alloc] init];
+}
+
 #pragma mark Fonts
 
 - (UIFont *)UIFontFromCTFont:(CTFontRef)ctFont

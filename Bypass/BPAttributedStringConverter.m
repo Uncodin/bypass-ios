@@ -15,7 +15,8 @@
 
 @implementation BPAttributedStringConverter
 
-- (NSAttributedString *)convertDocument:(BPDocument *)document {
+- (NSAttributedString *)convertDocument:(BPDocument *)document
+{
     BPAttributedTextVisitor *visitor = [BPAttributedTextVisitor new];
     BPElementWalker *walker = [BPElementWalker new];
 

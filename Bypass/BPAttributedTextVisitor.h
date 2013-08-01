@@ -27,6 +27,8 @@ OBJC_EXPORT NSString* const BPLinkStyleAttributeName;
 
 @interface BPAttributedTextVisitor : NSObject <BPElementVisitor>
 
-@property NSMutableAttributedString*  attributedText;
+@property (nonatomic, readonly) NSMutableAttributedString* attributedText;
+
+- (void)resetAttributedText;
 
 @end
