@@ -97,6 +97,8 @@ NSString *const BPLinkStyleAttributeName = @"NSLinkAttributeName";
         [self renderBoldItalicElement:element toTarget:target];
     } else if (elementType == BPText) {
         [self renderTextElement:element toTarget:target];
+    } else if (elementType == BPStrikethrough) {
+        [self renderStruckthroughElement:element toTarget:target];
     } else if (elementType == BPParagraph) {
         [self renderParagraphElement:element inRange:effectiveRange toTarget:target];
     } else if (elementType == BPHeader) {
