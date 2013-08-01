@@ -58,20 +58,6 @@ static const CGFloat kParagraphSpacingNone  =  0.0f;
     return self;
 }
 
-- (void)elementWalker:(BPElementWalker *)elementWalker
-     willVisitElement:(BPElement *)element
-        withTextRange:(NSRange)textRange
-{
-    // do nothing
-}
-
-- (int)elementWalker:(BPElementWalker *)elementWalker
-     didVisitElement:(BPElement *)element
-       withTextRange:(NSRange)textRange
-{
-    return [self convertElement:element toTarget:_attributedText range:textRange];
-}
-
 - (void)dealloc
 {
     if (_defaultFont != NULL)    CFRelease(_defaultFont);
@@ -91,6 +77,22 @@ static const CGFloat kParagraphSpacingNone  =  0.0f;
 - (void)resetAttributedText
 {
     _attributedText = [[NSMutableAttributedString alloc] init];
+}
+
+#pragma mark BPElementVisitor
+
+- (void)elementWalker:(BPElementWalker *)elementWalker
+     willVisitElement:(BPElement *)element
+        withTextRange:(NSRange)textRange
+{
+    // do nothing
+}
+
+- (int)elementWalker:(BPElementWalker *)elementWalker
+     didVisitElement:(BPElement *)element
+       withTextRange:(NSRange)textRange
+{
+    return [self convertElement:element toTarget:_attributedText range:textRange];
 }
 
 #pragma mark Fonts
