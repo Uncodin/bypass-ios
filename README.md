@@ -18,6 +18,8 @@ Bypass into your project.
 
 ### CocoaPods
 
+You can find a [sample project that integrates Bypass using CocoaPods here](https://github.com/damiancarrillo/bypass-ios-sample-cocoapods).
+
 Assuming you have CocoaPods installed, you can start using Bypass by doing the following:
 
 * Create your Xcode project
@@ -38,6 +40,8 @@ pod 'Bypass', '~> 1.0.1'
 
 ### Git Submodules
 
+You can find a [sample project that integrates Bypass using Git submodules here](https://github.com/damiancarrillo/bypass-ios-sample-submodules).
+
 * Create your Xcode project and [initialize your git repository](http://gitref.org/creating/).
 * Assuming you have a directory named `Libraries`, issue the command `git submodule add git@github.com:Uncodin/bypass-ios.git Libraries/Bypass`
 * Issue the command `git submodule update --init --recursive`
@@ -47,6 +51,11 @@ pod 'Bypass', '~> 1.0.1'
 * Navigate to your project's Build Phases
   * Add `Bypass` as a target dependency
   * In the same tab, add `QuartzCore.framework`, `CoreText.framework`, and `libBypass.a` to the list of libraries to link against.
+
+#### References
+
+* [Git Tools - Submodules](http://git-scm.com/book/en/Git-Tools-Submodules)
+* [Git Submodule Man Page](http://git-scm.com/docs/git-submodule)
 
 ## Usage
 
