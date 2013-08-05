@@ -23,6 +23,7 @@
 #import "BPDisplaySettings.h"
 
 NSString *const BPLinkStyleAttributeName = @"NSLinkAttributeName";
+NSString *const BPLinkTitleAttributeName = @"BPLinkTitleAttributeName";
 
 
 @implementation BPAttributedTextVisitor {
@@ -239,6 +240,12 @@ NSString *const BPLinkStyleAttributeName = @"NSLinkAttributeName";
     attributes[NSUnderlineStyleAttributeName] = @(NSUnderlineStyleSingle);
     attributes[NSForegroundColorAttributeName] = [_displaySettings linkColor];
     attributes[BPLinkStyleAttributeName] = element[@"link"];
+
+    NSString *linkTitle = element[@"title"];
+    if (linkTitle != nil) {
+        attributes[BPLinkTitleAttributeName] = linkTitle;
+    }
+
     [self renderSpanElement:element
                    withFont:[_displaySettings defaultFont]
                  attributes:attributes toTarget:target];
