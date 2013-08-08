@@ -328,6 +328,7 @@ BPCreatePageFrames(BPDocument *document,
         
         BPMarkdownPageView *textView = [[BPMarkdownPageView alloc] initWithFrame:textViewFrame
                                                                        textFrame:textFrame];
+        [textView setBackgroundColor:[self backgroundColor]];
         
         CFRelease(textFrame); // the textView took ownership, and the retain would be 2 at this point
 
