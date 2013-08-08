@@ -26,6 +26,7 @@
 @class BPDisplaySettings;
 
 OBJC_EXPORT NSString* const BPLinkStyleAttributeName;
+OBJC_EXPORT NSString* const BPLinkTitleAttributeName;
 
 @interface BPAttributedTextVisitor : NSObject <BPElementVisitor>
 
