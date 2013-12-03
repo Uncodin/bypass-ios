@@ -54,6 +54,7 @@ static const NSTimeInterval kReorientationDuration = 0.3;
  */
 static CFArrayRef
 BPCreatePageFrames(BPDocument *document,
+                   BPDisplaySettings *displaySettings,
                    CGSize pageSize,
                    CGSize *suggestedContentSizeOut,
                    NSAttributedString **attributedTextOut,
@@ -61,7 +62,7 @@ BPCreatePageFrames(BPDocument *document,
                    id accessibilityContainer) {
     BPElementWalker* walker = [[BPElementWalker alloc] init];
     
-    BPAttributedTextVisitor* textVisitor = [[BPAttributedTextVisitor alloc] init];
+    BPAttributedTextVisitor* textVisitor = [[BPAttributedTextVisitor alloc] initWithDisplaySettings:displaySettings];
     [walker addElementVisitor:textVisitor];
     
     BPAccessibilityVisitor* accessVisitor = [[BPAccessibilityVisitor alloc] initWithAccessibilityContainer:accessibilityContainer];
@@ -258,7 +259,7 @@ BPCreatePageFrames(BPDocument *document,
         NSArray* accessElements;
         CGSize contentSize;
         
-        CFArrayRef pageFrames = BPCreatePageFrames(_document, pageSize, &contentSize, &attributedText, &accessElements, self);
+        CFArrayRef pageFrames = BPCreatePageFrames(_document, _displaySettings, pageSize, &contentSize, &attributedText, &accessElements, self);
         
         _attributedText = attributedText;
         accessibleElements = accessElements;
