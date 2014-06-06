@@ -126,14 +126,22 @@ NSString *const BPLinkTitleAttributeName = @"BPLinkTitleAttributeName";
 - (int)insertNewlineIntoTarget:(NSMutableAttributedString*) target
                        atIndex:(int) index
 {
-    [target insertAttributedString:[[NSMutableAttributedString alloc] initWithString:@"\n"] atIndex:index];
+    [target insertAttributedString:
+        [[NSMutableAttributedString alloc] initWithString:@"\n"
+                                           attributes:@{
+                                                NSFontAttributeName: [_displaySettings defaultFont]
+                                            }] atIndex:index];
     
     return 1;
 }
 
 - (int)appendNewlineOntoTarget:(NSMutableAttributedString *)target
 {
-    [target appendAttributedString:[[NSMutableAttributedString alloc] initWithString:@"\n"]];
+    [target appendAttributedString:
+        [[NSMutableAttributedString alloc] initWithString:@"\n"
+                                            attributes:@{
+                                                NSFontAttributeName: [_displaySettings defaultFont]
+                                            }]];
     
     return 1;
 }
