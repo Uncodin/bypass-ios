@@ -5,7 +5,7 @@ in a `UIView`. It features nicely styled text, tappable links, and a smooth
 crossfade between representations for different device orientations.
 
 There is also an [Android version](https://github.com/Uncodin/bypass-android)
-of this library, that shares the [same core](http://gitub.com/Uncodin/bypass-core).
+of this library, that shares the [same core](http://github.com/Uncodin/bypass-core).
 
 ## Requirements
 
