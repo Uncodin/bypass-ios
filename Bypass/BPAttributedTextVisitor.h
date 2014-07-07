@@ -33,6 +33,7 @@ OBJC_EXPORT NSString* const BPLinkTitleAttributeName;
 @property (nonatomic, readonly) NSMutableAttributedString* attributedText;
 @property (nonatomic, strong) BPDisplaySettings *displaySettings;
 
+- (id)initWithDisplaySettings:(BPDisplaySettings *)displaySettings;
 - (void)resetAttributedText;
 
 @end
