@@ -76,7 +76,7 @@ NSString *const BPLinkTitleAttributeName = @"BPLinkTitleAttributeName";
     // Render span elements and insert special characters for block elements
     if (elementType == BPList) {
         if ([[element parentElement] elementType] == BPListItem) {
-            insertedCharacters += [self insertNewlineIntoTarget:target atIndex:effectiveRange.location];
+            insertedCharacters += [self insertNewlineIntoTarget:target atIndex:(int) effectiveRange.location];
         }
     } else if (elementType == BPAutoLink) {
         [self renderLinkElement:element toTarget:target];
@@ -363,7 +363,7 @@ NSString *const BPLinkTitleAttributeName = @"BPLinkTitleAttributeName";
             break;
     }
     
-    insertedCharacters += [self insertBulletIntoTarget:target color:bulletColor atIndex:effectiveRange.location];
+    insertedCharacters += [self insertBulletIntoTarget:target color:bulletColor atIndex:(int) effectiveRange.location];
     
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
      [paragraphStyle setLineSpacing:[_displaySettings lineSpacingSmall]];

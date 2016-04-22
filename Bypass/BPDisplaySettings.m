@@ -16,7 +16,11 @@
 {
     self = [super init];
     if (self) {
+#if !TARGET_OS_TV
         CGFloat systemFontSize = [UIFont systemFontSize];
+#else
+        CGFloat systemFontSize = [[UIFont preferredFontForTextStyle:UIFontTextStyleBody] pointSize];
+#endif
         
         self.defaultFont = [UIFont systemFontOfSize:systemFontSize];
         self.boldFont = [UIFont boldSystemFontOfSize:systemFontSize];
@@ -55,10 +59,11 @@
         CTFontSymbolicTraits traits = kCTFontBoldTrait | kCTFontItalicTrait;
         CTFontSymbolicTraits mask = kCTFontBoldTrait | kCTFontItalicTrait;
         CTFontRef boldItalicFontRef = CTFontCreateCopyWithSymbolicTraits(defaultFontRef, 0.f, NULL, traits, mask);
+        CFRelease(defaultFontRef);
         assert(boldItalicFontRef != NULL);
         
-        _boldItalicFont = [self UIFontFromCTFont:defaultFontRef];
-        CFRelease(defaultFontRef);
+        _boldItalicFont = [self UIFontFromCTFont:boldItalicFontRef];
+        CFRelease(boldItalicFontRef);
     }
     
     return _boldItalicFont;
