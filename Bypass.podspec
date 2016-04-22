@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
 	s.source = { :git => "https://github.com/mirego/bypass-ios.git", :tag => "#{s.version}", :submodules => true }
 
 	s.ios.deployment_target = '6.0'
-	#s.tvos.deployment_target = '9.0'
+	s.tvos.deployment_target = '9.0'
 
 	s.frameworks = "Foundation", "UIKit", "QuartzCore", "CoreGraphics", "CoreText"
 	s.libraries = "stdc++"
