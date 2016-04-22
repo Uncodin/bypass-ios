@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 	s.name = 'Bypass'
-	s.version = '1.0.1.1-mirego'
+	s.version = '1.0.1.2-mirego'
 	s.license = 'Apache License Version 2.0'
 	s.summary = 'Bypass - Bypass renders markdown directly to UIViews instead of using an intermediary HTML format.'
 	s.homepage = 'http://uncodin.github.io/bypass/'
