@@ -182,7 +182,9 @@ NSString *const BPLinkTitleAttributeName = @"BPLinkTitleAttributeName";
                  toTarget:(NSMutableAttributedString *)target
 {
     attributes[NSFontAttributeName] = font;
-    attributes[NSForegroundColorAttributeName] = [_displaySettings defaultColor];
+    if(!attributes[NSForegroundColorAttributeName]) {
+        attributes[NSForegroundColorAttributeName] = [_displaySettings defaultColor];
+    }
     
     NSString *text;
     

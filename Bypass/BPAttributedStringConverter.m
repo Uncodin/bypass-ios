@@ -39,9 +39,6 @@
     [_walker walkDocument:document];
 
     NSMutableAttributedString *attributedString = _visitor.attributedText;
-    [attributedString addAttribute:NSForegroundColorAttributeName
-                             value:[_visitor.displaySettings defaultColor]
-                             range:NSMakeRange(0, attributedString.length)];
 
     return attributedString;
 }
