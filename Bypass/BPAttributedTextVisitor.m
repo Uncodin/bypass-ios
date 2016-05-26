@@ -248,7 +248,9 @@ NSString *const BPLinkTitleAttributeName = @"BPLinkTitleAttributeName";
                  toTarget:(NSMutableAttributedString *)target
 {
     NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
-    attributes[NSUnderlineStyleAttributeName] = @(NSUnderlineStyleSingle);
+    if([_displaySettings linkUnderlined]) {
+        attributes[NSUnderlineStyleAttributeName] = @(NSUnderlineStyleSingle);
+    }
     attributes[NSForegroundColorAttributeName] = [_displaySettings linkColor];
     attributes[BPLinkStyleAttributeName] = element[@"link"];
 
@@ -401,6 +403,10 @@ NSString *const BPLinkTitleAttributeName = @"BPLinkTitleAttributeName";
     [paragraphStyle setHeadIndent:[_displaySettings headerHeadIndent]];
     
     attributes[NSParagraphStyleAttributeName] = paragraphStyle;
+    
+    if(attributes[NSForegroundColorAttributeName] == nil) {
+        attributes[NSForegroundColorAttributeName] = [_displaySettings headerColor];
+    }
     
     // Override font weight and size attributes (but preserve all other attributes)
     

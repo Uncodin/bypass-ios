@@ -14,6 +14,7 @@
 @property(nonatomic) UIColor *quoteColor;
 @property(nonatomic) UIColor *codeColor;
 @property(nonatomic) UIColor *linkColor;
+@property(nonatomic) UIColor *headerColor;
 
 @property(nonatomic) UIFont *defaultFont;
 @property(nonatomic) UIFont *boldFont;
@@ -49,5 +50,7 @@
 
 @property(nonatomic) CGFloat headerFirstLineHeadIndent;
 @property(nonatomic) CGFloat headerHeadIndent;
+
+@property(nonatomic) BOOL linkUnderlined;
 
 @end
