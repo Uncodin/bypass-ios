@@ -112,6 +112,7 @@ BPCreatePageFrames(BPDocument *document,
         CFArrayAppendValue(frames, textFrame);
         
         CFRange visibleRange = CTFrameGetVisibleStringRange(textFrame);
+        CFRelease(textFrame);
         textRange.location += visibleRange.length;
         
         y += CGRectGetHeight(pageRect);
@@ -330,8 +331,6 @@ BPCreatePageFrames(BPDocument *document,
                                                                        textFrame:textFrame];
         [textView setBackgroundColor:[self backgroundColor]];
         
-        CFRelease(textFrame); // the textView took ownership, and the retain would be 2 at this point
-
         [textView setTag:i + 1];
         [textView setAlpha:0.f];
         

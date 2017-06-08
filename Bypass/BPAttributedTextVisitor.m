@@ -76,7 +76,7 @@ NSString *const BPLinkTitleAttributeName = @"BPLinkTitleAttributeName";
     // Render span elements and insert special characters for block elements
     if (elementType == BPList) {
         if ([[element parentElement] elementType] == BPListItem) {
-            insertedCharacters += [self insertNewlineIntoTarget:target atIndex:effectiveRange.location];
+            insertedCharacters += [self insertNewlineIntoTarget:target atIndex:(int) effectiveRange.location];
         }
     } else if (elementType == BPAutoLink) {
         [self renderLinkElement:element toTarget:target];
@@ -182,7 +182,9 @@ NSString *const BPLinkTitleAttributeName = @"BPLinkTitleAttributeName";
                  toTarget:(NSMutableAttributedString *)target
 {
     attributes[NSFontAttributeName] = font;
-    attributes[NSForegroundColorAttributeName] = [_displaySettings defaultColor];
+    if(!attributes[NSForegroundColorAttributeName]) {
+        attributes[NSForegroundColorAttributeName] = [_displaySettings defaultColor];
+    }
     
     NSString *text;
     
@@ -246,7 +248,9 @@ NSString *const BPLinkTitleAttributeName = @"BPLinkTitleAttributeName";
                  toTarget:(NSMutableAttributedString *)target
 {
     NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
-    attributes[NSUnderlineStyleAttributeName] = @(NSUnderlineStyleSingle);
+    if([_displaySettings linkUnderlined]) {
+        attributes[NSUnderlineStyleAttributeName] = @(NSUnderlineStyleSingle);
+    }
     attributes[NSForegroundColorAttributeName] = [_displaySettings linkColor];
     attributes[BPLinkStyleAttributeName] = element[@"link"];
 
@@ -353,17 +357,17 @@ NSString *const BPLinkTitleAttributeName = @"BPLinkTitleAttributeName";
     
     switch (level % 3) {
         case 1:
-            bulletColor = [UIColor grayColor];
+            bulletColor = [_displaySettings bulletColorLevel1];
             break;
         case 2:
-            bulletColor = [UIColor lightGrayColor];
+            bulletColor =[_displaySettings bulletColorLevel2];
             break;
         default:
-            bulletColor = [UIColor blackColor];
+            bulletColor = [_displaySettings bulletColorDefault];
             break;
     }
     
-    insertedCharacters += [self insertBulletIntoTarget:target color:bulletColor atIndex:effectiveRange.location];
+    insertedCharacters += [self insertBulletIntoTarget:target color:bulletColor atIndex:(int) effectiveRange.location];
     
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
      [paragraphStyle setLineSpacing:[_displaySettings lineSpacingSmall]];
@@ -399,6 +403,10 @@ NSString *const BPLinkTitleAttributeName = @"BPLinkTitleAttributeName";
     [paragraphStyle setHeadIndent:[_displaySettings headerHeadIndent]];
     
     attributes[NSParagraphStyleAttributeName] = paragraphStyle;
+    
+    if(attributes[NSForegroundColorAttributeName] == nil) {
+        attributes[NSForegroundColorAttributeName] = [_displaySettings headerColor];
+    }
     
     // Override font weight and size attributes (but preserve all other attributes)
     
