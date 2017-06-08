@@ -39,7 +39,13 @@
         self.codeColor = [UIColor grayColor];
         self.linkColor = [UIColor blueColor];
         self.headerColor = self.defaultColor;
+        
+        self.bulletColorDefault = self.defaultColor;
+        self.bulletColorLevel1 = [UIColor grayColor];
+        self.bulletColorLevel2 = [UIColor lightGrayColor];
+        
         self.bulletIndentation = 13.0f;
+
         self.codeIndentation = 10.0f;
         self.quoteIndentation = 23.0f;
         self.paragraphSpacing = 20.0f;
